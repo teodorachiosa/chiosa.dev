@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --background: #141123;
+    --body-text: #fff;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background);
+    color: var(--body-text);
+    font-family: 'Lexend', 'Verdana', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.sr-only {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0;
+}
