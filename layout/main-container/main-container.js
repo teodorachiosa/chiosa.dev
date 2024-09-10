@@ -23,3 +23,6 @@ export class TCMainContainer extends HTMLElement {
 }
 
 customElements.define('tc-main-container', TCMainContainer);
+
+import { TCHeader } from '../header/header.js';
+import { TCFooter } from '../footer/footer.js';
