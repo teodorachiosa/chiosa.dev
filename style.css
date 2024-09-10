@@ -8,6 +8,7 @@
 body {
     display: flex;
     height: 100vh;
+    margin: 0;
     background-color: var(--background);
     color: var(--body-text);
     font-family: 'Lexend', 'Verdana', sans-serif;
