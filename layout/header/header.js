@@ -10,11 +10,11 @@ export class TCHeader extends HTMLElement {
     }
 
     get template() {
-        return tCHeaderStyle;
+        return tCHeaderTemplate;
     }
 
     get style() {
-        return tCHeaderTemplate;
+        return tCHeaderStyle;
     }
 
     render() {
@@ -23,3 +23,5 @@ export class TCHeader extends HTMLElement {
 }
 
 customElements.define('tc-header', TCHeader);
+
+import { TCThemeSwitcher } from '../../shared/theme-switcher/theme-switcher.js';

@@ -4,6 +4,6 @@ export const tCHeaderTemplate = /* HTML */ `
             <span class="top-line">Teodora</span>
             <span class="bottom-line">Chiosa</span>
         </div>
-        <button class="theme-switcher">icon</button>
+        <tc-theme-switcher></tc-theme-switcher>
     </header>
 `;

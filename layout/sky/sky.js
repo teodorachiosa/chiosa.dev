@@ -10,11 +10,11 @@ export class TCSky extends HTMLElement {
     }
 
     get template() {
-        return tCSkyStyle;
+        return tCSkyTemplate;
     }
 
     get style() {
-        return tCSkyTemplate;
+        return tCSkyStyle;
     }
 
     render() {

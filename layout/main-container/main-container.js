@@ -10,11 +10,11 @@ export class TCMainContainer extends HTMLElement {
     }
 
     get template() {
-        return tCMainContainerStyle;
+        return tCMainContainerTemplate;
     }
 
     get style() {
-        return tCMainContainerTemplate;
+        return tCMainContainerStyle;
     }
 
     render() {

@@ -10,11 +10,11 @@ export class TCHome extends HTMLElement {
     }
 
     get template() {
-        return tCHomeStyle;
+        return tCHomeTemplate;
     }
 
     get style() {
-        return tCHomeTemplate;
+        return tCHomeStyle;
     }
 
     render() {

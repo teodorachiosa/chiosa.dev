@@ -10,11 +10,11 @@ export class TCFooter extends HTMLElement {
     }
 
     get template() {
-        return tCFooterStyle;
+        return tCFooterTemplate;
     }
 
     get style() {
-        return tCFooterTemplate;
+        return tCFooterStyle;
     }
 
     render() {
