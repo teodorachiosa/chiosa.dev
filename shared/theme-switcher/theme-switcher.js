@@ -13,6 +13,7 @@ export class TCThemeSwitcher extends HTMLElement {
 
     connectedCallback() {
         this.isInitialLoad = true;
+        this.setThemeCookie(this.getThemeCookie());
         this.attachClickEvent();
     }
 
@@ -41,14 +42,21 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     toggleTheme() {
-        if (
-            this.getCurrentThemeDataAttribute() == 'dark' ||
-            (this.isInitialLoad &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
+        let currentTheme = this.getCurrentThemeDataAttribute();
+        if (currentTheme) {
+            document.documentElement.setAttribute(
+                'data-theme',
+                this.getOppositeTheme(currentTheme)
+            );
+            this.setThemeCookie(this.getOppositeTheme(currentTheme));
+        }
+
+        if (this.isInitialLoad) {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                this.setThemeCookie('light');
+            } else {
+                this.setThemeCookie('dark');
+            }
         }
 
         this.isInitialLoad = false;
@@ -56,6 +64,36 @@ export class TCThemeSwitcher extends HTMLElement {
 
     getCurrentThemeDataAttribute() {
         return document.documentElement.getAttribute('data-theme');
+    }
+
+    setThemeCookie(theme) {
+        if (theme !== null) {
+            const days = 7;
+            const date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            const expires = 'expires=' + date.toUTCString();
+            document.cookie = 'tc-theme=' + theme + ';' + expires + ';path=/';
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+    }
+
+    getThemeCookie() {
+        const name = 'tc-theme=';
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const cookies = decodedCookie.split(';');
+
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+
+        return null;
+    }
+
+    getOppositeTheme(theme) {
+        return theme === 'light' ? 'dark' : 'light';
     }
 }
 
