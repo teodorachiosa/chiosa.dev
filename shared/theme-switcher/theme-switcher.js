@@ -44,11 +44,8 @@ export class TCThemeSwitcher extends HTMLElement {
     toggleTheme() {
         let currentTheme = this.getCurrentThemeDataAttribute();
         if (currentTheme) {
-            document.documentElement.setAttribute(
-                'data-theme',
-                this.getOppositeTheme(currentTheme)
-            );
             this.setThemeCookie(this.getOppositeTheme(currentTheme));
+            return;
         }
 
         if (this.isInitialLoad) {
