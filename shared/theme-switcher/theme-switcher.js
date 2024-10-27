@@ -3,6 +3,8 @@ import { tCThemeSwitcherStyle } from './theme-switcher.style.js';
 
 export class TCThemeSwitcher extends HTMLElement {
     isInitialLoad = false;
+    // WORK IN PROGRESS !!!
+    currentTheme;
 
     constructor() {
         super();
@@ -14,6 +16,7 @@ export class TCThemeSwitcher extends HTMLElement {
     connectedCallback() {
         this.isInitialLoad = true;
         this.setThemeCookie(this.getThemeCookie());
+        this.updateButtonUI();
         this.attachClickEvent();
     }
 
@@ -29,10 +32,21 @@ export class TCThemeSwitcher extends HTMLElement {
         this.shadowRoot.innerHTML = `${this.style}${this.template}`;
     }
 
-    attachClickEvent() {
-        let themeSwitcherButton =
-            this.shadowRoot.querySelector('.theme-switcher');
+    updateButtonUI() {
+        const button = this.getThemeSwitcherButton();
 
+        this.currentTheme =
+            this.getCurrentThemeDataAttribute ??
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+        console.log(button);
+
+        button.innerHTML = 'Current theme:' + this.currentTheme;
+    }
+
+    attachClickEvent() {
+        let themeSwitcherButton = this.getThemeSwitcherButton();
         if (themeSwitcherButton) {
             themeSwitcherButton.addEventListener(
                 'click',
@@ -45,6 +59,7 @@ export class TCThemeSwitcher extends HTMLElement {
         let currentTheme = this.getCurrentThemeDataAttribute();
         if (currentTheme) {
             this.setThemeCookie(this.getOppositeTheme(currentTheme));
+            this.updateButtonUI();
             return;
         }
 
@@ -57,6 +72,7 @@ export class TCThemeSwitcher extends HTMLElement {
         }
 
         this.isInitialLoad = false;
+        this.updateButtonUI();
     }
 
     getCurrentThemeDataAttribute() {
@@ -91,6 +107,10 @@ export class TCThemeSwitcher extends HTMLElement {
 
     getOppositeTheme(theme) {
         return theme === 'light' ? 'dark' : 'light';
+    }
+
+    getThemeSwitcherButton() {
+        return this.shadowRoot.querySelector('.theme-switcher');
     }
 }
 

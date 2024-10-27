@@ -1,3 +1,3 @@
 export const tCThemeSwitcherTemplate = /* HTML */ `
-    <button class="theme-switcher">Toggle theme</button>
+    <button class="theme-switcher"></button>
 `;
