@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Philosopher:wght@700&display=swap');
 
-[data-theme='light'] {
-    --body: #141123;
-    --background: fff;
-    --sky-gradient: linear-gradient(
+:root {
+    /* LIGHT MODE */
+    --l-body: #141123;
+    --l-background: #fff;
+    --l-sky-gradient: linear-gradient(
         40deg,
         rgba(209, 239, 241, 1) 21%,
         rgba(63, 136, 181, 1) 100%
     );
-}
 
-[data-theme='dark'] {
-    --body: #fff;
-    --background: #141123;
-    --sky-gradient: linear-gradient(
+    /* DARK MODE */
+    --d-body: #fff;
+    --d-background: #141123;
+    --d-sky-gradient: linear-gradient(
         -160deg,
         rgba(30, 17, 60, 1) 5%,
         rgba(52, 74, 125, 1) 35%,
@@ -24,31 +24,31 @@
     );
 }
 
+[data-theme='light'] {
+    --body: var(--l-body);
+    --background: var(--l-background);
+    --sky-gradient: var(--l-sky-gradient);
+}
+
 @media (prefers-color-scheme: light) {
     :root:not([data-theme]) {
-        --body: #141123;
-        --background: fff;
-        --sky-gradient: linear-gradient(
-            40deg,
-            rgba(209, 239, 241, 1) 21%,
-            rgba(63, 136, 181, 1) 100%
-        );
+        --body: var(--l-body);
+        --background: var(--l-background);
+        --sky-gradient: var(--l-sky-gradient);
     }
+}
+
+[data-theme='dark'] {
+    --body: var(--d-body);
+    --background: var(--d-background);
+    --sky-gradient: var(--d-sky-gradient);
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
-        --body: #fff;
-        --background: #141123;
-        --sky-gradient: linear-gradient(
-            -160deg,
-            rgba(30, 17, 60, 1) 5%,
-            rgba(52, 74, 125, 1) 35%,
-            rgba(65, 117, 164, 1) 50%,
-            rgba(63, 136, 181, 1) 64%,
-            rgba(60, 157, 165, 1) 80%,
-            rgba(78, 166, 177, 1) 100%
-        );
+        --body: var(--d-body);
+        --background: var(--d-background);
+        --sky-gradient: var(--d-sky-gradient);
     }
 }
 
