@@ -12,7 +12,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         width: var(--size);
         height: var(--size);
         border: 3px solid color-mix(in hsl, var(--background), var(--body) 25%);
-        border-radius: 4px;
+        border-radius: 10px;
         background: transparent;
         color: var(--body);
 
