@@ -1,1 +1,3 @@
-export const tCSkyTemplate = /* HTML */ ``;
+const html = String.raw;
+
+export const tCSkyTemplate = html``;

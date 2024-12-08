@@ -1,11 +1,14 @@
+import { sharedStyle } from '/app.js';
+
 import { tCHeaderTemplate } from './header.template.js';
-import { tCHeaderStyle } from './header.style.js';
+import tCHeaderStyle from './header.style.js';
 
 export class TCHeader extends HTMLElement {
     constructor() {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHeaderStyle];
         this.render();
     }
 
@@ -13,12 +16,8 @@ export class TCHeader extends HTMLElement {
         return tCHeaderTemplate;
     }
 
-    get style() {
-        return tCHeaderStyle;
-    }
-
     render() {
-        this.shadowRoot.innerHTML = `${this.style}${this.template}`;
+        this.shadowRoot.innerHTML = `${this.template}`;
     }
 }
 

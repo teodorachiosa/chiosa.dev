@@ -1,11 +1,17 @@
+import { sharedStyle } from '/app.js';
+
 import { tCMainContainerTemplate } from './main-container.template.js';
-import { tCMainContainerStyle } from './main-container.style.js';
+import tCMainContainerStyle from './main-container.style.js';
 
 export class TCMainContainer extends HTMLElement {
     constructor() {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.adoptedStyleSheets = [
+            sharedStyle,
+            tCMainContainerStyle,
+        ];
         this.render();
     }
 
@@ -13,12 +19,8 @@ export class TCMainContainer extends HTMLElement {
         return tCMainContainerTemplate;
     }
 
-    get style() {
-        return tCMainContainerStyle;
-    }
-
     render() {
-        this.shadowRoot.innerHTML = `${this.style}${this.template}`;
+        this.shadowRoot.innerHTML = `${this.template}`;
     }
 }
 

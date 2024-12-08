@@ -1,5 +1,7 @@
-export const tCHeaderStyle = /* CSS */ `
-<style>
+const css = String.raw;
+const tCHeaderStyle = new CSSStyleSheet();
+
+tCHeaderStyle.replaceSync(css`
     header {
         display: flex;
         justify-content: space-between;
@@ -9,7 +11,6 @@ export const tCHeaderStyle = /* CSS */ `
             flex-direction: column;
             line-height: 1;
 
-            
             .top-line {
                 text-transform: lowercase;
                 font-family: 'Philosopher', sans-serif;
@@ -25,5 +26,5 @@ export const tCHeaderStyle = /* CSS */ `
             }
         }
     }
-</style>
-`;
+`);
+export default tCHeaderStyle;

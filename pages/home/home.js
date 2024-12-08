@@ -1,11 +1,14 @@
+import { sharedStyle } from '/app.js';
+
 import { tCHomeTemplate } from './home.template.js';
-import { tCHomeStyle } from './home.style.js';
+import tCHomeStyle from './home.style.js';
 
 export class TCHome extends HTMLElement {
     constructor() {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHomeStyle];
         this.render();
     }
 
@@ -13,12 +16,8 @@ export class TCHome extends HTMLElement {
         return tCHomeTemplate;
     }
 
-    get style() {
-        return tCHomeStyle;
-    }
-
     render() {
-        this.shadowRoot.innerHTML = `${this.style}${this.template}`;
+        this.shadowRoot.innerHTML = `${this.template}`;
     }
 }
 

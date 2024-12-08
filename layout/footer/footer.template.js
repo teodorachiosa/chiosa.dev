@@ -1,1 +1,3 @@
-export const tCFooterTemplate = /* HTML */ ` <footer></footer> `;
+const html = String.raw;
+
+export const tCFooterTemplate = html`<footer></footer>`;

@@ -1,4 +1,6 @@
-export const tCMainContainerTemplate = /* HTML */ `
+const html = String.raw;
+
+export const tCMainContainerTemplate = html`
     <tc-header></tc-header>
     <main>
         <slot></slot>

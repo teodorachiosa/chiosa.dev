@@ -1,11 +1,14 @@
+import { sharedStyle } from '/app.js';
+
 import { tCFooterTemplate } from './footer.template.js';
-import { tCFooterStyle } from './footer.style.js';
+import tCFooterStyle from './footer.style.js';
 
 export class TCFooter extends HTMLElement {
     constructor() {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCFooterStyle];
         this.render();
     }
 
@@ -13,12 +16,8 @@ export class TCFooter extends HTMLElement {
         return tCFooterTemplate;
     }
 
-    get style() {
-        return tCFooterStyle;
-    }
-
     render() {
-        this.shadowRoot.innerHTML = `${this.style}${this.template}`;
+        this.shadowRoot.innerHTML = `${this.template}`;
     }
 }
 

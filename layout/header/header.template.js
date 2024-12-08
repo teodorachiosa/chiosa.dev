@@ -1,4 +1,6 @@
-export const tCHeaderTemplate = /* HTML */ `
+const html = String.raw;
+
+export const tCHeaderTemplate = html`
     <header>
         <div class="logo">
             <span class="top-line">Teodora</span>

@@ -1,0 +1,21 @@
+.sr-only {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    outline: 0;
+}
+
+svg {
+    fill: currentcolor;
+}
+
+* {
+    box-sizing: border-box;
+}
