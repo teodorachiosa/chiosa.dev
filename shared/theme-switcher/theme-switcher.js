@@ -42,6 +42,7 @@ export class TCThemeSwitcher extends HTMLElement {
             : window.matchMedia('(prefers-color-scheme: dark)').matches
             ? 'dark'
             : 'light';
+        console.log(this.currentTheme);
 
         const svgPath =
             this.currentTheme == 'light'
@@ -84,8 +85,10 @@ export class TCThemeSwitcher extends HTMLElement {
         if (this.isInitialLoad) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 this.setThemeCookie('light');
+                this.updateButton();
             } else {
                 this.setThemeCookie('dark');
+                this.updateButton();
             }
         }
 
