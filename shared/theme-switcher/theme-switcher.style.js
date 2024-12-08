@@ -25,11 +25,10 @@ tCThemeSwitcherStyle.replaceSync(css`
             translate: -50%;
             width: max-content;
             background: color-mix(in hsl, var(--background), var(--body) 15%);
-            padding: 4px;
+            padding: 4px 8px;
             color: var(--body);
             border-radius: 10px;
-            transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-                display 0.2s ease-in-out allow-discrete;
+            transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
         &:hover,
