@@ -42,7 +42,6 @@ export class TCThemeSwitcher extends HTMLElement {
             : window.matchMedia('(prefers-color-scheme: dark)').matches
             ? 'dark'
             : 'light';
-        console.log(this.currentTheme);
 
         const svgPath =
             this.currentTheme == 'light'
