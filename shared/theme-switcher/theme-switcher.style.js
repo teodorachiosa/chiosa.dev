@@ -16,7 +16,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         border-radius: 0.7rem;
         background: transparent;
         color: var(--body);
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
 
         &::after {
             opacity: 0;
@@ -30,7 +30,7 @@ tCThemeSwitcherStyle.replaceSync(css`
             padding: 0.2rem 0.4rem;
             color: var(--body);
             border-radius: 0.5rem;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         &:hover,
