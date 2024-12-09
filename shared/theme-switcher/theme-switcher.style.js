@@ -43,8 +43,8 @@ tCThemeSwitcherStyle.replaceSync(css`
         }
 
         &:active {
-            box-shadow: inset 2px 2px 0 1px
-                color-mix(in hsl, var(--background), var(--body) 25%);
+            translate: 1px 1px;
+            box-shadow: none;
             background: color-mix(in hsl, var(--background), var(--body) 15%);
         }
     }
