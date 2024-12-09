@@ -53,10 +53,6 @@
     }
 }
 
-html {
-    font-size: 20px;
-}
-
 body {
     display: flex;
     height: 100vh;
