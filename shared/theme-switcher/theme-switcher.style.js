@@ -2,7 +2,7 @@ const css = String.raw;
 const tCThemeSwitcherStyle = new CSSStyleSheet();
 
 tCThemeSwitcherStyle.replaceSync(css`
-    .theme-switcher {
+    button.theme-switcher {
         --size: 3rem;
 
         position: relative;
@@ -16,6 +16,8 @@ tCThemeSwitcherStyle.replaceSync(css`
         border-radius: 0.7rem;
         background: transparent;
         color: var(--body);
+        transition: box-shadow 0.2s ease, translate 0.2s ease,
+            background 0.2s ease;
 
         &::after {
             opacity: 0;
