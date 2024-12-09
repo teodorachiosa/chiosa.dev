@@ -1,11 +1,11 @@
 .sr-only {
     position: absolute;
     left: 0;
-    width: 1px;
-    height: 1px;
+    width: 0.05rem;
+    height: ;
     border: 0;
     padding: 0;
-    margin: -1px;
+    margin: -0.05rem;
     clip: rect(0 0 0 0);
     overflow: hidden;
     white-space: nowrap;
@@ -18,4 +18,11 @@ svg {
 
 * {
     box-sizing: border-box;
+}
+
+button {
+    font-family: 'Lexend', 'Verdana', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
