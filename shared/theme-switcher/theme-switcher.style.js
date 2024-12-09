@@ -3,7 +3,7 @@ const tCThemeSwitcherStyle = new CSSStyleSheet();
 
 tCThemeSwitcherStyle.replaceSync(css`
     .theme-switcher {
-        --size: 2.2rem;
+        --size: 3rem;
 
         position: relative;
         display: flex;
@@ -11,9 +11,9 @@ tCThemeSwitcherStyle.replaceSync(css`
         align-items: center;
         width: var(--size);
         height: var(--size);
-        border: 0.15rem solid
+        border: 0.2rem solid
             color-mix(in hsl, var(--background), var(--body) 25%);
-        border-radius: 0.5rem;
+        border-radius: 0.7rem;
         background: transparent;
         color: var(--body);
 
@@ -21,7 +21,7 @@ tCThemeSwitcherStyle.replaceSync(css`
             opacity: 0;
             content: '' attr(aria-label) '';
             position: absolute;
-            top: calc(100% + 0.4rem);
+            bottom: calc(100% + 0.5rem);
             left: 50%;
             translate: -50%;
             width: max-content;
@@ -34,8 +34,8 @@ tCThemeSwitcherStyle.replaceSync(css`
 
         &:hover,
         &:focus-visible {
-            translate: -0.05rem -0.05rem;
-            box-shadow: 0.1rem 0.1rem 0 0.05rem
+            translate: -0.1rem -0.1rem;
+            box-shadow: 0.15rem 0.15rem 0 0.1rem
                 color-mix(in hsl, var(--background), var(--body) 15%);
 
             &::after {
@@ -44,14 +44,14 @@ tCThemeSwitcherStyle.replaceSync(css`
         }
 
         &:active {
-            translate: 0.05rem 0.05rem;
-            box-shadow: none;
+            translate: 0rem 0rem;
+            box-shadow: inset 0.15rem 0.15rem 0 0.1rem var(--shadow);
             background: color-mix(in hsl, var(--background), var(--body) 15%);
         }
 
         svg {
-            width: 1rem;
-            height: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }
 `);
