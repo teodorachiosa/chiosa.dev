@@ -3,7 +3,7 @@ const tCThemeSwitcherStyle = new CSSStyleSheet();
 
 tCThemeSwitcherStyle.replaceSync(css`
     .theme-switcher {
-        --size: 44px;
+        --size: 2.2rem;
 
         position: relative;
         display: flex;
@@ -11,8 +11,9 @@ tCThemeSwitcherStyle.replaceSync(css`
         align-items: center;
         width: var(--size);
         height: var(--size);
-        border: 3px solid color-mix(in hsl, var(--background), var(--body) 25%);
-        border-radius: 10px;
+        border: 0.15rem solid
+            color-mix(in hsl, var(--background), var(--body) 25%);
+        border-radius: 0.5rem;
         background: transparent;
         color: var(--body);
 
@@ -20,21 +21,21 @@ tCThemeSwitcherStyle.replaceSync(css`
             opacity: 0;
             content: '' attr(aria-label) '';
             position: absolute;
-            top: calc(100% + 8px);
+            top: calc(100% + 0.4rem);
             left: 50%;
             translate: -50%;
             width: max-content;
             background: color-mix(in hsl, var(--background), var(--body) 15%);
-            padding: 4px 8px;
+            padding: 0.2rem 0.4rem;
             color: var(--body);
-            border-radius: 10px;
+            border-radius: 0.5rem;
             transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
         &:hover,
         &:focus-visible {
-            translate: -1px -1px;
-            box-shadow: 2px 2px 0 1px
+            translate: -0.05rem -0.05rem;
+            box-shadow: 0.1rem 0.1rem 0 0.05rem
                 color-mix(in hsl, var(--background), var(--body) 15%);
 
             &::after {
@@ -43,9 +44,14 @@ tCThemeSwitcherStyle.replaceSync(css`
         }
 
         &:active {
-            translate: 1px 1px;
+            translate: 0.05rem 0.05rem;
             box-shadow: none;
             background: color-mix(in hsl, var(--background), var(--body) 15%);
+        }
+
+        svg {
+            width: 1rem;
+            height: 1rem;
         }
     }
 `);
