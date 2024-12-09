@@ -22,7 +22,6 @@ tCHeaderStyle.replaceSync(css`
                 text-transform: uppercase;
                 font-size: 1em;
                 letter-spacing: 0.3em;
-                font-weight: 400;
             }
         }
     }
