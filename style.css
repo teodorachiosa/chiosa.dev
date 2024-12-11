@@ -1,41 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Philosopher:wght@700&display=swap');
 @import 'styles/shared.css';
 
+@property --sky-gradient-color-a {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --sky-gradient-color-b {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
 :root {
     /* LIGHT MODE */
     --l-shadow: color-mix(in hsl, var(--background), #000 20%);
     --l-body: #141123;
     --l-background: #f7e4ff;
-    --l-sky-gradient: linear-gradient(
-        -160deg,
-        rgb(89 73 159) 5%,
-        rgb(171 95 195) 35%,
-        rgb(199 119 195) 50%,
-        rgb(255 158 179) 64%,
-        rgb(239 178 166) 80%,
-        rgb(255 229 180) 100%
-    );
+    --l-sky-gradient-position: center bottom;
+    --l-color-a: rgb(89, 73, 159);
+    --l-color-b: rgb(255, 229, 180);
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #fff;
     --d-background: #141123;
-    --d-sky-gradient: linear-gradient(
-        -160deg,
-        rgba(30, 17, 60, 1) 5%,
-        rgba(52, 74, 125, 1) 35%,
-        rgba(65, 117, 164, 1) 50%,
-        rgba(63, 136, 181, 1) 64%,
-        rgba(60, 157, 165, 1) 80%,
-        rgba(78, 166, 177, 1) 100%
-    );
+    --d-sky-gradient-position: center top;
+    --d-color-a: rgba(30, 17, 60, 1);
+    --d-color-b: rgba(78, 166, 177, 1);
 }
 
 [data-theme='light'] {
     --shadow: var(--l-shadow);
     --body: var(--l-body);
     --background: var(--l-background);
-    --sky-gradient: var(--l-sky-gradient);
+    --sky-gradient-position: var(--l-sky-gradient-position);
+    --sky-gradient-color-a: var(--l-color-a);
+    --sky-gradient-color-b: var(--l-color-b);
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,7 +45,9 @@
         --shadow: var(--l-shadow);
         --body: var(--l-body);
         --background: var(--l-background);
-        --sky-gradient: var(--l-sky-gradient);
+        --sky-gradient-position: var(--l-sky-gradient-position);
+        --sky-gradient-color-a: var(--l-color-a);
+        --sky-gradient-color-b: var(--l-color-b);
     }
 }
 
@@ -51,7 +55,9 @@
     --shadow: var(--d-shadow);
     --body: var(--d-body);
     --background: var(--d-background);
-    --sky-gradient: var(--d-sky-gradient);
+    --sky-gradient-position: var(--d-sky-gradient-position);
+    --sky-gradient-color-a: var(--d-color-a);
+    --sky-gradient-color-b: var(--d-color-b);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +65,9 @@
         --shadow: var(--d-shadow);
         --body: var(--d-body);
         --background: var(--d-background);
-        --sky-gradient: var(--d-sky-gradient);
+        --sky-gradient-position: var(--d-sky-gradient-position);
+        --sky-gradient-color-a: var(--d-color-a);
+        --sky-gradient-color-b: var(--d-color-b);
     }
 }
 
