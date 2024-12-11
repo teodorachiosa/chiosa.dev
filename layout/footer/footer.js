@@ -18,6 +18,27 @@ export class TCFooter extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `${this.template}`;
+
+        this.getSVGIcons();
+    }
+
+    getSVGIcons() {
+        const svgPaths = [
+            'assets/linkedin.svg',
+            'assets/codepen.svg',
+            'assets/cara.svg',
+            'assets/popicons-at-symbol.svg',
+        ];
+
+        svgPaths.forEach((svgPath, index) => {
+            fetch(svgPath)
+                .then((response) => response.text())
+                .then((svgContent) => {
+                    this.shadowRoot.querySelectorAll('ul li a')[
+                        index
+                    ].innerHTML = svgContent;
+                });
+        });
     }
 }
 
