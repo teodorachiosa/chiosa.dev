@@ -14,7 +14,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         border: 0.2rem solid
             color-mix(in hsl, var(--background), var(--body) 25%);
         border-radius: 0.7rem;
-        background: transparent;
+        background-color: transparent;
         color: var(--body);
         transition: all 0.3s ease;
 
@@ -26,7 +26,11 @@ tCThemeSwitcherStyle.replaceSync(css`
             left: 50%;
             translate: -50%;
             width: max-content;
-            background: color-mix(in hsl, var(--background), var(--body) 15%);
+            background-color: color-mix(
+                in hsl,
+                var(--background),
+                var(--body) 15%
+            );
             padding: 0.2rem 0.4rem;
             color: var(--body);
             border-radius: 0.5rem;
@@ -36,8 +40,10 @@ tCThemeSwitcherStyle.replaceSync(css`
         &:hover,
         &:focus-visible {
             translate: -0.1rem -0.1rem;
-            box-shadow: 0.15rem 0.15rem 0 0.1rem
-                color-mix(in hsl, var(--background), var(--body) 15%);
+            box-shadow: 0 0 20px
+                    color-mix(in hsl, var(--background), var(--body) 10%),
+                0.15rem 0.15rem 0 0.1rem
+                    color-mix(in hsl, var(--background), var(--body) 15%);
 
             &::after {
                 opacity: 1;
@@ -47,7 +53,11 @@ tCThemeSwitcherStyle.replaceSync(css`
         &:active {
             translate: 0rem 0rem;
             box-shadow: inset 0.15rem 0.15rem 0 0.1rem var(--shadow);
-            background: color-mix(in hsl, var(--background), var(--body) 15%);
+            background-color: color-mix(
+                in hsl,
+                var(--background),
+                var(--body) 15%
+            );
         }
 
         svg {
