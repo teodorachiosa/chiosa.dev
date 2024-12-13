@@ -25,7 +25,11 @@ export const tCFooterTemplate = html`
                 ></a>
             </li>
             <li>
-                <a class="link mail" href="mailto:placeholder@mail.com"></a>
+                <a
+                    aria-label="Email"
+                    class="link mail"
+                    href="mailto:placeholder@mail.com"
+                ></a>
             </li>
         </ul>
     </footer>
