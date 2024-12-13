@@ -16,7 +16,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         border-radius: 0.7rem;
         background-color: transparent;
         color: var(--body);
-        font-size: 1em;
+        font-size: 1rem;
         transition: all 0.3s ease;
 
         &::after {
