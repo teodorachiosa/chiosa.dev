@@ -23,7 +23,6 @@ export class TCThemeSwitcher extends HTMLElement {
         this.isInitialLoad = true;
         this.themeSwitcherButton =
             this.shadowRoot.querySelector('.theme-switcher');
-        this.setThemeCookie(this.getThemeCookie());
         this.updateButton();
         this.attachClickEvent();
     }
@@ -107,21 +106,6 @@ export class TCThemeSwitcher extends HTMLElement {
             document.cookie = 'tc-theme=' + theme + ';' + expires + ';path=/';
             document.documentElement.setAttribute('data-theme', theme);
         }
-    }
-
-    getThemeCookie() {
-        const name = 'tc-theme=';
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const cookies = decodedCookie.split(';');
-
-        for (let i = 0; i < cookies.length; i++) {
-            let cookie = cookies[i].trim();
-            if (cookie.indexOf(name) === 0) {
-                return cookie.substring(name.length, cookie.length);
-            }
-        }
-
-        return null;
     }
 
     getOppositeTheme(theme) {
