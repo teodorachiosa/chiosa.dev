@@ -14,13 +14,13 @@ tCHeaderStyle.replaceSync(css`
             .top-line {
                 text-transform: lowercase;
                 font-family: 'Philosopher', sans-serif;
-                font-size: 2em;
-                letter-spacing: 0.04em;
+                font-size: 2rem;
+                letter-spacing: 0.04rem;
             }
 
             .bottom-line {
                 text-transform: uppercase;
-                font-size: 1em;
+                font-size: 1rem;
                 letter-spacing: 0.3em;
             }
         }
