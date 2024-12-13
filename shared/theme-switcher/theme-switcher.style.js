@@ -16,13 +16,14 @@ tCThemeSwitcherStyle.replaceSync(css`
         border-radius: 0.7rem;
         background-color: transparent;
         color: var(--body);
+        font-size: 1em;
         transition: all 0.3s ease;
 
         &::after {
             opacity: 0;
             content: '' attr(aria-label) '';
             position: absolute;
-            bottom: calc(100% + 0.5rem);
+            bottom: calc(100% + 1rem);
             left: 50%;
             translate: -50%;
             width: max-content;
