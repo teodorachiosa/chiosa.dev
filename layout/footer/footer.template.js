@@ -5,31 +5,30 @@ export const tCFooterTemplate = html`
         <ul>
             <li>
                 <a
-                    aria-label="Linkedin"
                     class="link linkedin"
                     href="https://www.linkedin.com/in/teodora-chiosa"
-                ></a>
+                >
+                    <span class="icon"></span>
+                    <span class="text">Linkedin</span></a
+                >
             </li>
             <li>
-                <a
-                    aria-label="Codepen"
-                    class="link codepen"
-                    href="https://codepen.io/teodorachiosa"
-                ></a>
+                <a class="link codepen" href="https://codepen.io/teodorachiosa">
+                    <span class="icon"></span>
+                    <span class="text">Codepen</span></a
+                >
             </li>
             <li>
-                <a
-                    aria-label="Cara"
-                    class="link cara"
-                    href="https://cara.app/teodorachiosa"
-                ></a>
+                <a class="link cara" href="https://cara.app/teodorachiosa">
+                    <span class="icon"></span>
+                    <span class="text">Cara</span></a
+                >
             </li>
             <li>
-                <a
-                    aria-label="Email"
-                    class="link mail"
-                    href="mailto:placeholder@mail.com"
-                ></a>
+                <a class="link mail" href="mailto:placeholder@mail.com">
+                    <span class="icon"></span>
+                    <span class="text">Email</span></a
+                >
             </li>
         </ul>
     </footer>
