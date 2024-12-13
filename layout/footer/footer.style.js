@@ -4,84 +4,41 @@ const tCFooterStyle = new CSSStyleSheet();
 tCFooterStyle.replaceSync(css`
     ul {
         display: flex;
-        gap: 40px;
+        flex-wrap: wrap;
+        column-gap: 2.5rem;
+        row-gap: 1.1rem;
         padding: 0;
         list-style: none;
 
         li {
             a.link {
-                outline: none;
                 position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 0.5rem;
                 color: var(--body);
-                font-size: 1em;
-                border-radius: 50%;
+                font-size: 1.1rem;
                 transition: all 0.3s ease-in-out;
+                text-decoration: underline 0.2rem transparent;
+                text-underline-offset: 1.5rem;
 
-                svg {
-                    box-sizing: content-box;
-                    padding: 10px;
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 0.7rem;
+                .icon {
+                    display: flex;
                 }
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    z-index: -1;
-                    top: 10px;
-                    right: 2px;
-                    bottom: 2px;
-                    left: 2px;
-                    background: linear-gradient(
-                        color-mix(in hsl, var(--background), var(--body) 15%),
-                        transparent
-                    );
-                    border-radius: 50%;
-                    opacity: 0;
-                    transition: all 0.3s ease-in-out;
-                }
-
-                &::after {
-                    opacity: 0;
-                    content: '' attr(aria-label) '';
-                    position: absolute;
-                    bottom: calc(100% + 0.3rem);
-                    left: 50%;
-                    translate: -50%;
-                    width: max-content;
-                    background-color: color-mix(
-                        in hsl,
-                        var(--background),
-                        var(--body) 15%
-                    );
-                    padding: 0.2rem 0.4rem;
-                    color: var(--body);
-                    border-radius: 0.5rem;
-                    transition: all 0.3s ease;
-                }
-
-                &:focus-visible {
-                    svg {
-                        outline: auto;
-                    }
+                .text {
+                    margin-left: 0.6rem;
                 }
 
                 &:hover,
                 &:focus-visible {
-                    scale: 1.15;
-
-                    &::before {
-                        opacity: 0.7;
-                        filter: blur(5px);
-                    }
-
-                    &::after {
-                        opacity: 1;
-                    }
+                    text-decoration-color: color-mix(
+                        in hsl,
+                        var(--background),
+                        var(--body) 25%
+                    );
+                    text-underline-offset: 0.4rem;
                 }
             }
         }
