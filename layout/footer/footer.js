@@ -34,7 +34,7 @@ export class TCFooter extends HTMLElement {
             fetch(svgPath)
                 .then((response) => response.text())
                 .then((svgContent) => {
-                    this.shadowRoot.querySelectorAll('ul li a')[
+                    this.shadowRoot.querySelectorAll('ul li .link .icon')[
                         index
                     ].innerHTML = svgContent;
                 });
