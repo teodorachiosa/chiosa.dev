@@ -21,7 +21,7 @@ tCFooterStyle.replaceSync(css`
                 font-size: 1.1rem;
                 transition: all 0.3s ease-in-out;
                 text-decoration: underline 0.2rem transparent;
-                text-underline-offset: 1.5rem;
+                text-underline-offset: 0.8rem;
 
                 .icon {
                     display: flex;
