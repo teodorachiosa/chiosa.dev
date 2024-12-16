@@ -35,6 +35,7 @@ tCThemeSwitcherStyle.replaceSync(css`
             padding: 0.2rem 0.4rem;
             color: var(--body);
             border-radius: 0.5rem;
+            pointer-events: none;
             transition: all 0.3s ease;
         }
 
