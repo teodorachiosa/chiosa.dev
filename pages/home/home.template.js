@@ -1,5 +1,9 @@
 const html = String.raw;
 
 export const tCHomeTemplate = html`
-    <p>Hi! I’m Teodora a front-end developer and accessibility enthusiast.</p>
+    <p>Hi!</p>
+    <p>
+        I’m <span class="my-name">Teodora</span>, a front-end developer and
+        <span class="my-passion">accessibility enthusiast</span>.
+    </p>
 `;
