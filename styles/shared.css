@@ -1,4 +1,4 @@
-.sr-only {
+.visually-hidden {
     position: absolute;
     left: 0;
     width: 0.05rem;
@@ -13,7 +13,10 @@
 }
 
 svg {
-    fill: currentcolor;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
 }
 
 * {
