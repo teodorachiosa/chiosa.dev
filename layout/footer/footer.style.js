@@ -19,12 +19,13 @@ tCFooterStyle.replaceSync(css`
                 padding: 0.5rem;
                 color: var(--body);
                 font-size: 1.1rem;
-                transition: all 0.3s ease-in-out;
+                transition: 0.2s ease-in-out;
                 text-decoration: underline 0.2rem transparent;
                 text-underline-offset: 0.8rem;
 
                 .icon {
                     display: flex;
+                    width: 1rem;
                 }
 
                 .text {
@@ -39,6 +40,7 @@ tCFooterStyle.replaceSync(css`
                         var(--body) 25%
                     );
                     text-underline-offset: 0.4rem;
+                    translate: -0.1rem -0.1rem;
                 }
             }
         }
