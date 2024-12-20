@@ -3,7 +3,7 @@ const tCHomeStyle = new CSSStyleSheet();
 
 tCHomeStyle.replaceSync(css`
     p {
-        font-size: 2.5rem;
+        font-size: 2rem;
         max-width: 28ch;
         margin: 0;
         font-weight: 200;
