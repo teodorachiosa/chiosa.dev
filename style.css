@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Philosopher:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import 'styles/shared.css';
 
 @property --sky-gradient-color-a {
