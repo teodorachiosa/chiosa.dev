@@ -27,7 +27,7 @@ export class TCFooter extends HTMLElement {
             'assets/linkedin.svg',
             'assets/codepen.svg',
             'assets/cara.svg',
-            'assets/popicons-at-symbol.svg',
+            'assets/at-symbol.svg',
         ];
 
         svgPaths.forEach((svgPath, index) => {
