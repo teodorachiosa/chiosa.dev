@@ -12,7 +12,7 @@ tCSkyStyle.replaceSync(css`
         display: block;
         width: 22rem;
         background-image: var(--sky-gradient);
-        transition-duration: 0.3s;
+        transition-duration: 0.2s;
         transition-timing-function: ease;
         transition-property: --sky-gradient-color-a, --sky-gradient-color-b;
     }
