@@ -7,7 +7,7 @@ tCMainContainerStyle.replaceSync(css`
         flex-direction: column;
         justify-content: space-between;
         flex-grow: 1;
-        margin: 90px 140px;
+        margin: 10vmin;
     }
 `);
 export default tCMainContainerStyle;
