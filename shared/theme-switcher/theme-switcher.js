@@ -43,24 +43,24 @@ export class TCThemeSwitcher extends HTMLElement {
             : 'light';
 
         const svgPath =
-            this.currentTheme == 'light'
-                ? 'assets/popicons-moon.svg'
-                : 'assets/popicons-sun.svg';
+            this.currentTheme == 'light' ? 'assets/moon.svg' : 'assets/sun.svg';
 
         fetch(svgPath)
             .then((response) => response.text())
             .then((svgContent) => {
-                this.themeSwitcherButton.innerHTML = svgContent;
+                this.themeSwitcherButton.querySelector('.icon').innerHTML =
+                    svgContent;
             });
 
         this.updateButtonProperties();
     }
 
     updateButtonProperties() {
-        this.themeSwitcherButton.setAttribute(
-            'aria-label',
-            `Toggle ${this.currentTheme === 'light' ? 'dark' : 'light'} mode`
-        );
+        this.themeSwitcherButton.querySelector(
+            '.text-wrapper .text'
+        ).innerHTML = `${
+            this.currentTheme === 'light' ? 'Dark' : 'Light'
+        } mode`;
     }
 
     attachClickEvent() {
