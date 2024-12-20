@@ -17,44 +17,55 @@ tCThemeSwitcherStyle.replaceSync(css`
         background-color: transparent;
         color: var(--body);
         font-size: 1rem;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
 
-        &::after {
+        .icon {
+            display: flex;
+        }
+
+        .text-wrapper {
+            visibility: hidden;
             opacity: 0;
-            content: '' attr(aria-label) '';
             position: absolute;
-            bottom: calc(100% + 1rem);
+            top: 100%;
             left: 50%;
             translate: -50%;
+            display: flex;
             width: max-content;
-            background-color: color-mix(
-                in hsl,
-                var(--background),
-                var(--body) 15%
-            );
-            padding: 0.2rem 0.4rem;
-            color: var(--body);
-            border-radius: 0.5rem;
-            pointer-events: none;
-            transition: all 0.3s ease;
+            padding-top: 1rem;
+            transition: 0.2s ease;
+
+            .text {
+                user-select: text;
+                color: var(--body);
+                border-radius: 0.5rem;
+                padding: 0.2rem 0.4rem;
+                background-color: color-mix(
+                    in hsl,
+                    var(--background),
+                    var(--body) 15%
+                );
+            }
         }
 
         &:hover,
         &:focus-visible {
             translate: -0.1rem -0.1rem;
-            box-shadow: 0 0 20px
-                    color-mix(in hsl, var(--background), var(--body) 10%),
+            box-shadow: inset 0 0 0 0 var(--shadow),
+                0 0 2rem color-mix(in hsl, var(--background), var(--body) 10%),
                 0.15rem 0.15rem 0 0.1rem
                     color-mix(in hsl, var(--background), var(--body) 15%);
 
-            &::after {
+            .text-wrapper {
                 opacity: 1;
+                visibility: visible;
             }
         }
 
         &:active {
             translate: 0rem 0rem;
-            box-shadow: inset 0.15rem 0.15rem 0 0.1rem var(--shadow);
+            box-shadow: inset 0.15rem 0.15rem 0 0.1rem var(--shadow),
+                0 0 0 0 color-mix(in hsl, var(--background), var(--body) 15%);
             background-color: color-mix(
                 in hsl,
                 var(--background),
