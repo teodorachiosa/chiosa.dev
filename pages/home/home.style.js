@@ -4,9 +4,9 @@ const tCHomeStyle = new CSSStyleSheet();
 tCHomeStyle.replaceSync(css`
     p {
         font-size: 2rem;
-        max-width: 28ch;
         margin: 0;
         font-weight: 200;
+        text-wrap: balance;
 
         &:not(:last-child) {
             margin-bottom: 1rem;

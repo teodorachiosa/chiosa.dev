@@ -21,6 +21,7 @@ tCThemeSwitcherStyle.replaceSync(css`
 
         .icon {
             display: flex;
+            transition: all 0.2s ease;
         }
 
         .text-wrapper {
@@ -50,11 +51,24 @@ tCThemeSwitcherStyle.replaceSync(css`
 
         &:hover,
         &:focus-visible {
-            translate: -0.1rem -0.1rem;
+            translate: -0.15rem -0.15rem;
             box-shadow: inset 0 0 0 0 var(--shadow),
                 0 0 2rem color-mix(in hsl, var(--background), var(--body) 10%),
-                0.15rem 0.15rem 0 0.1rem
+                0.05rem 0.05rem 0 0
+                    color-mix(in hsl, var(--background), var(--body) 15%),
+                0.1rem 0.1rem 0 0
+                    color-mix(in hsl, var(--background), var(--body) 15%),
+                0.15rem 0.15rem 0 0
+                    color-mix(in hsl, var(--background), var(--body) 15%),
+                0.2rem 0.2rem 0 0
+                    color-mix(in hsl, var(--background), var(--body) 15%),
+                0.25rem 0.25rem 0 0
                     color-mix(in hsl, var(--background), var(--body) 15%);
+
+            .icon {
+                scale: 1.1;
+                rotate: 10deg;
+            }
 
             .text-wrapper {
                 opacity: 1;

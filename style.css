@@ -74,7 +74,7 @@
 body {
     position: relative;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: var(--background);
     color: var(--body);
@@ -82,4 +82,10 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+@media (width < 600px) {
+    tc-sky {
+        display: none;
+    }
 }

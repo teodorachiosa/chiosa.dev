@@ -2,26 +2,30 @@ const css = String.raw;
 const tCHeaderStyle = new CSSStyleSheet();
 
 tCHeaderStyle.replaceSync(css`
-    header {
-        display: flex;
-        justify-content: space-between;
+    :host {
+        margin-bottom: 25vh;
 
-        .logo {
+        header {
             display: flex;
-            flex-direction: column;
-            line-height: 1;
+            justify-content: space-between;
 
-            .top-line {
-                text-transform: lowercase;
-                font-family: 'Philosopher', sans-serif;
-                font-size: 2rem;
-                letter-spacing: 0.04rem;
-            }
+            .logo {
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
 
-            .bottom-line {
-                text-transform: uppercase;
-                font-size: 1rem;
-                letter-spacing: 0.3em;
+                .top-line {
+                    text-transform: lowercase;
+                    font-family: 'Philosopher', sans-serif;
+                    font-size: 2rem;
+                    letter-spacing: 0.04rem;
+                }
+
+                .bottom-line {
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    letter-spacing: 0.3em;
+                }
             }
         }
     }
