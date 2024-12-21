@@ -56,10 +56,8 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     updateButtonProperties() {
-        this.themeSwitcherButton.querySelector(
-            '.text-wrapper .text'
-        ).innerHTML = `${
-            this.currentTheme === 'light' ? 'Dark' : 'Light'
+        this.themeSwitcherButton.querySelector('.text').innerHTML = `Set ${
+            this.currentTheme === 'light' ? 'dark' : 'light'
         } mode`;
     }
 
