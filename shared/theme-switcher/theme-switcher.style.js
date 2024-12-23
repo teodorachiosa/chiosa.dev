@@ -23,6 +23,10 @@ tCThemeSwitcherStyle.replaceSync(css`
             display: flex;
             height: 100%;
             transition: all 0.2s ease;
+
+            svg {
+                stroke: currentColor;
+            }
         }
 
         .text {

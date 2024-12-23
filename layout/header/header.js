@@ -9,6 +9,8 @@ export class TCHeader extends HTMLElement {
 
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHeaderStyle];
+
+        this.loadLogo();
         this.render();
     }
 
@@ -18,6 +20,19 @@ export class TCHeader extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `${this.template}`;
+    }
+
+    loadLogo() {
+        const logoPath = 'assets/logo.svg';
+
+        fetch(logoPath)
+            .then((response) => response.text())
+            .then((logoContent) => {
+                this.shadowRoot.querySelector('.logo').innerHTML = logoContent;
+                this.shadowRoot
+                    .querySelector('.logo svg')
+                    .setAttribute('aria-label', 'logo');
+            });
     }
 }
 

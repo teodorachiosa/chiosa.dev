@@ -19,16 +19,16 @@
     --l-body: #141123;
     --l-background: #f7e4ff;
     --l-sky-gradient-position: center bottom;
-    --l-color-a: rgb(89, 73, 159);
-    --l-color-b: rgb(255, 229, 180);
+    --l-color-a: rgb(105, 84, 197);
+    --l-color-b: rgb(238, 147, 135);
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #fff;
     --d-background: #141123;
     --d-sky-gradient-position: center top;
-    --d-color-a: rgba(30, 17, 60, 1);
-    --d-color-b: rgba(78, 166, 177, 1);
+    --d-color-a: rgb(25, 7, 66);
+    --d-color-b: rgb(63, 185, 201);
 }
 
 [data-theme='light'] {

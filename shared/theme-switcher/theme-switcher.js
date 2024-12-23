@@ -4,7 +4,8 @@ import { tCThemeSwitcherTemplate } from './theme-switcher.template.js';
 import tCThemeSwitcherStyle from './theme-switcher.style.js';
 
 export class TCThemeSwitcher extends HTMLElement {
-    isInitialLoad = false;
+    isInitialLoadWithoutCookie = false;
+    hasThemeButtonInteraction = false;
     currentTheme;
     themeSwitcherButton;
 
@@ -20,7 +21,7 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     connectedCallback() {
-        this.isInitialLoad = true;
+        this.isInitialLoadWithoutCookie = true;
         this.themeSwitcherButton =
             this.shadowRoot.querySelector('.theme-switcher');
         this.updateButton();
@@ -66,9 +67,13 @@ export class TCThemeSwitcher extends HTMLElement {
             this.currentTheme === 'light' ? 'dark' : 'light'
         } mode`;
 
-        this.shadowRoot.querySelector('.status').innerHTML = `${
-            this.currentTheme === 'light' ? 'Light' : 'Dark'
-        } mode activated`;
+        if (this.hasThemeButtonInteraction) {
+            console.log(this.hasThemeButtonInteraction);
+
+            this.shadowRoot.querySelector('.status').innerHTML = `${
+                this.currentTheme === 'light' ? 'Light' : 'Dark'
+            } mode activated`;
+        }
     }
 
     attachClickEvent() {
@@ -81,6 +86,8 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     toggleTheme() {
+        this.hasThemeButtonInteraction = true;
+
         let currentTheme = this.getCurrentThemeDataAttribute();
         if (currentTheme) {
             this.setThemeCookie(this.getOppositeTheme(currentTheme));
@@ -88,7 +95,7 @@ export class TCThemeSwitcher extends HTMLElement {
             return;
         }
 
-        if (this.isInitialLoad) {
+        if (this.isInitialLoadWithoutCookie) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 this.setThemeCookie('light');
                 this.updateButton();
@@ -98,7 +105,7 @@ export class TCThemeSwitcher extends HTMLElement {
             }
         }
 
-        this.isInitialLoad = false;
+        this.isInitialLoadWithoutCookie = false;
     }
 
     getCurrentThemeDataAttribute() {
