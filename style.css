@@ -35,7 +35,6 @@
     --shadow: var(--l-shadow);
     --body: var(--l-body);
     --background: var(--l-background);
-    --sky-gradient-position: var(--l-sky-gradient-position);
     --sky-gradient-color-a: var(--l-color-a);
     --sky-gradient-color-b: var(--l-color-b);
 }
@@ -45,7 +44,6 @@
         --shadow: var(--l-shadow);
         --body: var(--l-body);
         --background: var(--l-background);
-        --sky-gradient-position: var(--l-sky-gradient-position);
         --sky-gradient-color-a: var(--l-color-a);
         --sky-gradient-color-b: var(--l-color-b);
     }
@@ -55,7 +53,6 @@
     --shadow: var(--d-shadow);
     --body: var(--d-body);
     --background: var(--d-background);
-    --sky-gradient-position: var(--d-sky-gradient-position);
     --sky-gradient-color-a: var(--d-color-a);
     --sky-gradient-color-b: var(--d-color-b);
 }
@@ -65,7 +62,6 @@
         --shadow: var(--d-shadow);
         --body: var(--d-body);
         --background: var(--d-background);
-        --sky-gradient-position: var(--d-sky-gradient-position);
         --sky-gradient-color-a: var(--d-color-a);
         --sky-gradient-color-b: var(--d-color-b);
     }

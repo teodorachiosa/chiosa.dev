@@ -43,7 +43,7 @@ export class TCThemeSwitcher extends HTMLElement {
             : 'light';
 
         const svgPath =
-            this.currentTheme == 'light' ? 'assets/moon.svg' : 'assets/sun.svg';
+            this.currentTheme == 'light' ? 'assets/sun.svg' : 'assets/moon.svg';
 
         fetch(svgPath)
             .then((response) => response.text())
@@ -56,9 +56,9 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     updateButtonProperties() {
-        this.themeSwitcherButton.querySelector('.text').innerHTML = `Set ${
-            this.currentTheme === 'light' ? 'dark' : 'light'
-        } mode`;
+        this.themeSwitcherButton.querySelector('.text').innerHTML = `${
+            this.currentTheme === 'light' ? 'Light' : 'Dark'
+        }`;
     }
 
     attachClickEvent() {

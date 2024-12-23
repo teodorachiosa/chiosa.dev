@@ -56,7 +56,7 @@ tCFooterStyle.replaceSync(css`
                 grid-template-rows: auto;
                 justify-items: start;
                 column-gap: 2.5rem;
-                row-gap: 0.5rem;
+                row-gap: 0.9rem;
             }
         }
     }

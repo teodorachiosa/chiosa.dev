@@ -8,10 +8,10 @@ tCThemeSwitcherStyle.replaceSync(css`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 0.6rem;
+        padding: 0.6rem 0.7rem;
         height: var(--size);
         border: 0.2rem solid
-            color-mix(in hsl, var(--background), var(--body) 30%);
+            color-mix(in hsl, var(--background), var(--body) 35%);
         border-radius: 0.7rem;
         background-color: transparent;
         color: var(--body);
@@ -21,6 +21,7 @@ tCThemeSwitcherStyle.replaceSync(css`
 
         .icon {
             display: flex;
+            height: 100%;
             transition: all 0.2s ease;
         }
 
@@ -61,11 +62,11 @@ tCThemeSwitcherStyle.replaceSync(css`
                 var(--background),
                 var(--body) 15%
             );
-        }
 
-        svg {
-            width: 1.5rem;
-            height: 1.5rem;
+            .icon {
+                scale: 0.8;
+                rotate: -10deg;
+            }
         }
     }
 `);
