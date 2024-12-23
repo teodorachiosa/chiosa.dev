@@ -31,7 +31,7 @@ export class TCHeader extends HTMLElement {
                 this.shadowRoot.querySelector('.logo').innerHTML = logoContent;
                 this.shadowRoot
                     .querySelector('.logo svg')
-                    .setAttribute('aria-label', 'logo');
+                    .setAttribute('aria-label', 'Teodora Chiosa logo');
             });
     }
 }
