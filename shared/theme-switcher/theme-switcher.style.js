@@ -3,7 +3,7 @@ const tCThemeSwitcherStyle = new CSSStyleSheet();
 
 tCThemeSwitcherStyle.replaceSync(css`
     button.theme-switcher {
-        --size: 3rem;
+        --size: 2.8rem;
 
         display: flex;
         justify-content: center;
@@ -15,7 +15,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         border-radius: 0.7rem;
         background-color: transparent;
         color: var(--body);
-        font-size: 1rem;
+        font-size: 0.9rem;
         user-select: text;
         transition: all 0.2s ease;
 
@@ -26,7 +26,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         }
 
         .text {
-            margin-left: 0.3rem;
+            margin-left: 0.5rem;
             display: flex;
             color: var(--body);
         }
@@ -64,7 +64,7 @@ tCThemeSwitcherStyle.replaceSync(css`
             );
 
             .icon {
-                scale: 0.8;
+                scale: 0.9;
                 rotate: -10deg;
             }
         }
