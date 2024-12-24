@@ -13,9 +13,7 @@ tCHomeStyle.replaceSync(css`
         }
 
         .my-name {
-            font-family: 'Philosopher', serif;
-            font-size: 1.1em;
-            font-weight: 700;
+            font-weight: 400;
         }
 
         .my-passion {

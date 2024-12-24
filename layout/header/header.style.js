@@ -12,8 +12,8 @@ tCHeaderStyle.replaceSync(css`
             .logo {
                 --sky-gradient: linear-gradient(
                     -160deg in oklch,
-                    var(--sky-gradient-color-a),
-                    var(--sky-gradient-color-b)
+                    var(--sky-gradient-color-dark),
+                    var(--sky-gradient-color-light)
                 );
 
                 --top-offset: 23%;
