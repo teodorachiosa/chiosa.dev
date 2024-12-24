@@ -65,6 +65,42 @@
             />
         </filter>
         <linearGradient
+            id="paint0_linear_121_578"
+            x1="30.5323"
+            y1="27.5684"
+            x2="37.8149"
+            y2="41.7785"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="var(--body)" />
+            <stop offset="0.78" stop-color="#E7D2E7" />
+            <stop offset="1" stop-color="#CED8E1" />
+        </linearGradient>
+        <linearGradient
+            id="paint1_linear_121_578"
+            x1="31.1237"
+            y1="28.6843"
+            x2="37.2625"
+            y2="40.6625"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="var(--body)" />
+            <stop offset="0.78" stop-color="#E7D2E7" />
+            <stop offset="1" stop-color="#CED8E1" />
+        </linearGradient>
+        <linearGradient
+            id="paint2_linear_121_578"
+            x1="30.5323"
+            y1="27.5684"
+            x2="37.8152"
+            y2="41.7788"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="var(--body)" />
+            <stop offset="0.78" stop-color="#E7D2E7" />
+            <stop offset="1" stop-color="#CED8E1" />
+        </linearGradient>
+        <linearGradient
             id="paint3_linear_121_578"
             x1="28.84"
             y1="24.3755"
@@ -73,7 +109,7 @@
             gradientUnits="userSpaceOnUse"
         >
             <stop offset="0" stop-color="var(--body)" />
-            <stop offset="1" stop-color="color-mix(in hsl, var(--background), var(--body) 80%)" />
+            <stop offset="1" stop-color="var(--body)" />
         </linearGradient>
     </defs>
 </svg>

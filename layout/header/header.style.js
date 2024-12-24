@@ -16,8 +16,8 @@ tCHeaderStyle.replaceSync(css`
                     var(--sky-gradient-color-light)
                 );
 
-                --top-offset: 23%;
-                --left-offset: 10%;
+                --top-offset: 18%;
+                --left-offset: 8%;
 
                 position: relative;
                 translate: -1.6rem -1.6rem;
@@ -28,12 +28,12 @@ tCHeaderStyle.replaceSync(css`
                     position: absolute;
                     top: var(--top-offset);
                     left: var(--left-offset);
-                    height: 50%;
+                    height: 60%;
                     aspect-ratio: 1/1;
                     background: var(--sky-gradient);
                     border-radius: 50%;
-                    filter: blur(0.2rem);
-                    opacity: 0.1;
+                    filter: blur(0.5rem);
+                    opacity: 0.07;
                     animation: breathe 10s ease infinite;
                 }
 
@@ -48,9 +48,9 @@ tCHeaderStyle.replaceSync(css`
                     background: var(--sky-gradient);
                     border-radius: 50%;
                     filter: blur(2rem);
-                    opacity: 0.8;
+                    opacity: 0.9;
                     animation: breathe 10s ease infinite;
-                    animation-delay: -5s;
+                    animation-delay: -4s;
                 }
             }
         }
@@ -58,13 +58,16 @@ tCHeaderStyle.replaceSync(css`
 
     @keyframes breathe {
         0% {
-            scale: 1;
+            scale: 0.4;
+            rotate: -90deg;
         }
         50% {
-            scale: 1.3;
+            scale: 1;
+            rotate: 90deg;
         }
         100% {
-            scale: 1;
+            scale: 0.4;
+            rotate: -90deg;
         }
     }
 `);
