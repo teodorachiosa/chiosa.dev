@@ -14,8 +14,10 @@ function getThemeCookie() {
 }
 
 function setInitialTheme(theme) {
+    const root = document.querySelector(':root');
+
     if (theme !== null) {
-        document.documentElement.setAttribute('data-theme', theme);
+        root.style.setProperty('color-scheme', theme);
     }
 }
 

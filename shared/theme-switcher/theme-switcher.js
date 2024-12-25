@@ -4,7 +4,6 @@ import { tCThemeSwitcherTemplate } from './theme-switcher.template.js';
 import tCThemeSwitcherStyle from './theme-switcher.style.js';
 
 export class TCThemeSwitcher extends HTMLElement {
-    isInitialLoadWithoutCookie = false;
     hasThemeButtonInteraction = false;
     currentTheme;
     themeSwitcherButton;
@@ -21,10 +20,10 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     connectedCallback() {
-        this.isInitialLoadWithoutCookie = true;
         this.themeSwitcherButton =
             this.shadowRoot.querySelector('.theme-switcher');
         this.updateButton();
+        this.watchForColorSchemeMediaChanges();
         this.attachClickEvent();
     }
 
@@ -37,14 +36,21 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     updateButton() {
-        this.currentTheme = this.getCurrentThemeDataAttribute()
-            ? this.getCurrentThemeDataAttribute()
-            : window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light';
+        this.currentTheme = this.getCurrentColorScheme();
 
-        const svgPath =
-            this.currentTheme == 'light' ? 'assets/sun.svg' : 'assets/moon.svg';
+        let svgPath;
+        switch (this.currentTheme) {
+            case 'light':
+                svgPath = 'assets/sun.svg';
+                break;
+            case 'dark':
+                svgPath = 'assets/moon.svg';
+                break;
+            default:
+                svgPath = this.getPrefersDarkMedia().matches
+                    ? 'assets/moon.svg'
+                    : 'assets/sun.svg';
+        }
 
         fetch(svgPath)
             .then((response) => response.text())
@@ -57,22 +63,40 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     updateButtonProperties() {
-        this.themeSwitcherButton.querySelector('.text').innerHTML = `${
-            this.currentTheme === 'light' ? 'Light' : 'Dark'
-        }`;
-
-        this.themeSwitcherButton.querySelector(
-            '.label'
-        ).innerHTML = `Activate ${
-            this.currentTheme === 'light' ? 'dark' : 'light'
-        } mode`;
-
-        if (this.hasThemeButtonInteraction) {
-            console.log(this.hasThemeButtonInteraction);
-
-            this.shadowRoot.querySelector('.status').innerHTML = `${
-                this.currentTheme === 'light' ? 'Light' : 'Dark'
-            } mode activated`;
+        switch (this.currentTheme) {
+            case 'light':
+                this.themeSwitcherButton.querySelector('.text').innerHTML =
+                    'Light';
+                this.themeSwitcherButton.querySelector('.label').innerHTML =
+                    'Activate dark mode';
+                if (this.hasThemeButtonInteraction) {
+                    this.shadowRoot.querySelector('.status').innerHTML =
+                        'Light mode activated';
+                }
+                break;
+            case 'dark':
+                this.themeSwitcherButton.querySelector('.text').innerHTML =
+                    'Dark';
+                this.themeSwitcherButton.querySelector('.label').innerHTML =
+                    'Activate light mode';
+                if (this.hasThemeButtonInteraction) {
+                    this.shadowRoot.querySelector('.status').innerHTML =
+                        'Dark mode activated';
+                }
+                break;
+            default:
+                this.themeSwitcherButton.querySelector('.text').innerHTML =
+                    this.getPrefersDarkMedia().matches ? 'Dark' : 'Light';
+                this.themeSwitcherButton.querySelector(
+                    '.label'
+                ).innerHTML = `Activate ${
+                    this.getPrefersDarkMedia().matches ? 'light' : 'dark'
+                } mode`;
+                if (this.hasThemeButtonInteraction) {
+                    this.shadowRoot.querySelector('.status').innerHTML = `${
+                        this.getPrefersDarkMedia().matches ? 'Dark' : 'Light'
+                    } mode activated`;
+                }
         }
     }
 
@@ -88,28 +112,50 @@ export class TCThemeSwitcher extends HTMLElement {
     toggleTheme() {
         this.hasThemeButtonInteraction = true;
 
-        let currentTheme = this.getCurrentThemeDataAttribute();
-        if (currentTheme) {
-            this.setThemeCookie(this.getOppositeTheme(currentTheme));
-            this.updateButton();
-            return;
-        }
+        let currentColorScheme = this.getCurrentColorScheme();
 
-        if (this.isInitialLoadWithoutCookie) {
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                this.setThemeCookie('light');
-                this.updateButton();
-            } else {
+        switch (currentColorScheme) {
+            case 'light':
+                document
+                    .querySelector(':root')
+                    .style.setProperty('color-scheme', 'dark');
                 this.setThemeCookie('dark');
-                this.updateButton();
-            }
+                break;
+            case 'dark':
+                document
+                    .querySelector(':root')
+                    .style.setProperty('color-scheme', 'light');
+                this.setThemeCookie('light');
+                break;
+            default:
+                document
+                    .querySelector(':root')
+                    .style.setProperty(
+                        'color-scheme',
+                        this.getPrefersDarkMedia().matches ? 'light' : 'dark'
+                    );
+                this.setThemeCookie(
+                    this.getPrefersDarkMedia().matches ? 'light' : 'dark'
+                );
         }
 
-        this.isInitialLoadWithoutCookie = false;
+        this.updateButton();
     }
 
-    getCurrentThemeDataAttribute() {
-        return document.documentElement.getAttribute('data-theme');
+    getCurrentColorScheme() {
+        return getComputedStyle(document.querySelector(':root'))
+            .getPropertyValue('color-scheme')
+            .trim();
+    }
+
+    getPrefersDarkMedia() {
+        return window.matchMedia('(prefers-color-scheme: dark)');
+    }
+
+    watchForColorSchemeMediaChanges() {
+        this.getPrefersDarkMedia().addEventListener('change', (event) => {
+            this.updateButton();
+        });
     }
 
     setThemeCookie(theme) {
@@ -121,10 +167,6 @@ export class TCThemeSwitcher extends HTMLElement {
             document.cookie = 'tc-theme=' + theme + ';' + expires + ';path=/';
             document.documentElement.setAttribute('data-theme', theme);
         }
-    }
-
-    getOppositeTheme(theme) {
-        return theme === 'light' ? 'dark' : 'light';
     }
 }
 
