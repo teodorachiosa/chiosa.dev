@@ -20,7 +20,8 @@ tCHeaderStyle.replaceSync(css`
                 --left-offset: 8%;
 
                 position: relative;
-                translate: -1.6rem -1.6rem;
+                margin-top: -1.6rem;
+                margin-left: -1.6rem;
 
                 &::before {
                     content: '';
