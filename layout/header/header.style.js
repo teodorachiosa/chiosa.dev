@@ -3,7 +3,7 @@ const tCHeaderStyle = new CSSStyleSheet();
 
 tCHeaderStyle.replaceSync(css`
     :host {
-        margin-bottom: 18vh;
+        margin-bottom: 10rem;
 
         header {
             display: flex;

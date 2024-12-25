@@ -3,7 +3,7 @@ const tCFooterStyle = new CSSStyleSheet();
 
 tCFooterStyle.replaceSync(css`
     :host {
-        margin-top: 20vh;
+        margin-top: 10rem;
         container-type: inline-size;
 
         ul {
