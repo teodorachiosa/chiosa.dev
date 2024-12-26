@@ -16,7 +16,6 @@ tCThemeSwitcherStyle.replaceSync(css`
         background-color: transparent;
         color: var(--body);
         font-size: 0.9rem;
-        user-select: text;
         transition: all 0.2s ease;
 
         .icon {
