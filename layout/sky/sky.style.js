@@ -9,8 +9,9 @@ tCSkyStyle.replaceSync(css`
             var(--sky-gradient-color-light)
         );
 
+        flex-shrink: 0;
         display: block;
-        width: 30rem;
+        width: 30%;
         background-image: var(--sky-gradient);
         transition-duration: 0.2s;
         transition-timing-function: ease;
