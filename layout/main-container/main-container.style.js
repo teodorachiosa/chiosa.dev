@@ -15,23 +15,6 @@ tCMainContainerStyle.replaceSync(css`
             max-width: 40rem;
             width: 100%;
         }
-
-        .fade-animation {
-            animation: 0.5s fade;
-        }
-    }
-
-    @keyframes fade {
-        0% {
-            translate: 0 2rem;
-            opacity: 0;
-            visibility: hidden;
-        }
-        100% {
-            translate: 0 0;
-            opacity: 1;
-            visibility: visible;
-        }
     }
 `);
 export default tCMainContainerStyle;

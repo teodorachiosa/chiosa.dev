@@ -165,7 +165,6 @@ export class TCThemeSwitcher extends HTMLElement {
             date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
             const expires = 'expires=' + date.toUTCString();
             document.cookie = 'tc-theme=' + theme + ';' + expires + ';path=/';
-            document.documentElement.setAttribute('data-theme', theme);
         }
     }
 }
