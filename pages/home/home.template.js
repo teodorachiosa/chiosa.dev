@@ -3,7 +3,13 @@ const html = String.raw;
 export const tCHomeTemplate = html`
     <div class="avatar-and-text-wrapper">
         <div class="avatar gradient-background--before">
-            <img src="assets/avatar.png" alt="i dunno" />
+            <img
+                src="assets/avatar.png"
+                alt="photo of Teodora, smiling at the camera"
+                class="avatar-img"
+            />
+            <div class="decoration-stars"></div>
+            <div class="decoration-stars blur"></div>
             <div class="avatar-background gradient-background"></div>
         </div>
         <div class="intro-text">

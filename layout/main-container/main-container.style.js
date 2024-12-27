@@ -7,7 +7,9 @@ tCMainContainerStyle.replaceSync(css`
         flex-direction: column;
         align-items: center;
         flex-grow: 1;
-        margin: 10vmin;
+        padding: 10vmin;
+        height: 100%;
+        overflow: auto;
 
         .main-container-max-width {
             display: flex;

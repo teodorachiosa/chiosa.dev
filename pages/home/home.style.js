@@ -13,12 +13,29 @@ tCHomeStyle.replaceSync(css`
             .avatar {
                 position: relative;
                 align-self: center;
-                width: 10rem;
-                height: 10rem;
+                width: 9rem;
+                height: 9rem;
 
-                img {
+                .avatar-img {
                     width: inherit;
                     height: inherit;
+                }
+
+                .decoration-stars {
+                    position: absolute;
+                    left: -1.5rem;
+                    bottom: 1rem;
+                    width: 3.7rem;
+                    height: 3.7rem;
+
+                    &.blur {
+                        filter: blur(0.5em);
+                    }
+
+                    svg > * {
+                        transition: ease var(--short-animation);
+                        transition-property: fill;
+                    }
                 }
 
                 .avatar-background {

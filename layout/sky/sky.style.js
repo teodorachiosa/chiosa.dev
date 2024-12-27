@@ -5,6 +5,7 @@ tCSkyStyle.replaceSync(css`
     :host {
         flex-shrink: 0;
         width: 30%;
+        height: 100%;
         display: block;
 
         .sky-container {

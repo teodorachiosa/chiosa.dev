@@ -67,10 +67,14 @@
     );
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     position: relative;
     display: flex;
-    min-height: 100vh;
+    height: 100%;
     margin: 0;
     background-color: var(--background);
     color: var(--body);
