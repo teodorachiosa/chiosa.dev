@@ -3,19 +3,13 @@ const tCHeaderStyle = new CSSStyleSheet();
 
 tCHeaderStyle.replaceSync(css`
     :host {
-        margin-bottom: 10rem;
+        margin-bottom: 8rem;
 
         header {
             display: flex;
             justify-content: space-between;
 
             .logo {
-                --sky-gradient: linear-gradient(
-                    -160deg in oklch,
-                    var(--sky-gradient-color-dark),
-                    var(--sky-gradient-color-light)
-                );
-
                 --top-offset: 18%;
                 --left-offset: 8%;
 
@@ -31,10 +25,10 @@ tCHeaderStyle.replaceSync(css`
                     left: var(--left-offset);
                     height: 60%;
                     aspect-ratio: 1/1;
-                    background: var(--sky-gradient);
+                    background: var(--sky-gradient-color-light);
                     border-radius: 50%;
                     filter: blur(0.5rem);
-                    opacity: 0.07;
+                    opacity: 0.05;
                     animation: breathe 10s ease infinite;
                 }
 
@@ -46,12 +40,17 @@ tCHeaderStyle.replaceSync(css`
                     left: var(--left-offset);
                     height: 60%;
                     aspect-ratio: 1/1;
-                    background: var(--sky-gradient);
+                    background: var(--sky-gradient-color-light);
                     border-radius: 50%;
                     filter: blur(2rem);
-                    opacity: 0.9;
+                    opacity: 0.3;
                     animation: breathe 10s ease infinite;
                     animation-delay: -4s;
+                }
+
+                svg * {
+                    transition: ease 0.5s;
+                    transition-property: fill, stroke;
                 }
             }
         }
@@ -60,15 +59,12 @@ tCHeaderStyle.replaceSync(css`
     @keyframes breathe {
         0% {
             scale: 0.4;
-            rotate: -90deg;
         }
         50% {
             scale: 1;
-            rotate: 90deg;
         }
         100% {
             scale: 0.4;
-            rotate: -90deg;
         }
     }
 `);

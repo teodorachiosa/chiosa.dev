@@ -27,3 +27,14 @@ button {
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.gradient-background {
+    --sky-gradient: linear-gradient(
+        -160deg in oklch,
+        var(--sky-gradient-color-dark),
+        var(--sky-gradient-color-medium),
+        var(--sky-gradient-color-light)
+    );
+
+    background-image: var(--sky-gradient);
+}

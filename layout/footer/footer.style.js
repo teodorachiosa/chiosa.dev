@@ -22,7 +22,7 @@ tCFooterStyle.replaceSync(css`
                     padding: 0.5rem;
                     color: var(--body);
                     font-size: 1.1rem;
-                    transition: 0.2s ease-in-out;
+                    transition: var(--short-animation) ease-in-out;
                     text-decoration: underline 0.2rem transparent;
                     text-underline-offset: 0.8rem;
 

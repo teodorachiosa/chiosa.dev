@@ -7,6 +7,12 @@
     initial-value: transparent;
 }
 
+@property --sky-gradient-color-medium {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
 @property --sky-gradient-color-light {
     syntax: '<color>';
     inherits: true;
@@ -22,17 +28,19 @@
     --l-background: #f7e4ff;
     --l-sky-gradient-position: center bottom;
     --l-gradient-color-dark: rgb(105, 84, 197);
-    --l-gradient-color-light: rgb(238, 147, 135);
+    --l-gradient-color-medium: rgb(209, 132, 174);
+    --l-gradient-color-light: rgb(243, 186, 148);
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #fff;
     --d-background: #141123;
     --d-sky-gradient-position: center top;
-    --d-gradient-color-dark: rgb(30, 17, 60);
-    --d-gradient-color-light: rgb(63, 185, 201);
+    --d-gradient-color-dark: rgb(20, 14, 48);
+    --d-gradient-color-medium: rgb(81, 77, 134);
+    --d-gradient-color-light: rgb(70, 162, 172);
 
-    /* GENERIC */
+    /* GENERIC (LIGHT/DARK) */
     --shadow: light-dark(var(--l-shadow), var(--d-shadow));
     --body: light-dark(var(--l-body), var(--d-body));
     --background: light-dark(var(--l-background), var(--d-background));
@@ -40,9 +48,22 @@
         var(--l-gradient-color-dark),
         var(--d-gradient-color-dark)
     );
+    --sky-gradient-color-medium: light-dark(
+        var(--l-gradient-color-medium),
+        var(--d-gradient-color-medium)
+    );
     --sky-gradient-color-light: light-dark(
         var(--l-gradient-color-light),
         var(--d-gradient-color-light)
+    );
+
+    /* OTHER */
+    --short-animation: 0.2s;
+    --medium-animation: 0.3s;
+    --main-gradient: linear-gradient(
+        -160deg in oklch,
+        var(--sky-gradient-color-dark),
+        var(--sky-gradient-color-light)
     );
 }
 
@@ -57,6 +78,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    transition: ease var(--short-animation);
+    transition-property: color, background-color;
 }
 
 @media (width < 600px) {
