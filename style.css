@@ -60,11 +60,6 @@
     /* OTHER */
     --short-animation: 0.2s;
     --medium-animation: 0.3s;
-    --main-gradient: linear-gradient(
-        -160deg in oklch,
-        var(--sky-gradient-color-dark),
-        var(--sky-gradient-color-light)
-    );
 }
 
 html {
