@@ -21,23 +21,6 @@ tCHomeStyle.replaceSync(css`
                     height: inherit;
                 }
 
-                .decoration-stars {
-                    position: absolute;
-                    left: -1.5rem;
-                    bottom: 1rem;
-                    width: 3.7rem;
-                    height: 3.7rem;
-
-                    &.blur {
-                        filter: blur(0.5em);
-                    }
-
-                    svg > * {
-                        transition: ease var(--short-animation);
-                        transition-property: fill;
-                    }
-                }
-
                 .avatar-background {
                     z-index: -1;
                     position: absolute;

@@ -8,8 +8,6 @@ export const tCHomeTemplate = html`
                 alt="Teodora, smiling at the camera"
                 class="avatar-img"
             />
-            <div class="decoration-stars"></div>
-            <div class="decoration-stars blur"></div>
             <div class="avatar-background gradient-background"></div>
         </div>
         <div class="intro-text">

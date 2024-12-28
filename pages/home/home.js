@@ -25,10 +25,10 @@ export class TCHome extends HTMLElement {
     }
 
     addDecorationStars() {
-        const svgPath = 'assets/stars.svg';
+        const svgPath = 'assets/star.svg';
         fetchSVG(svgPath, (svgContent) => {
             this.shadowRoot
-                .querySelectorAll('.decoration-stars')
+                .querySelectorAll('.decoration-star')
                 .forEach((element) => {
                     element.innerHTML = svgContent;
                 });
