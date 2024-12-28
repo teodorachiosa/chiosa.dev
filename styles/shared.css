@@ -28,6 +28,17 @@ button {
     font-style: normal;
 }
 
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: auto;
+    outline-style: solid;
+    outline-color: var(--body);
+    outline-offset: 2px;
+}
+
 .gradient-background {
     --sky-gradient: linear-gradient(
         -160deg in oklch,
