@@ -1,4 +1,5 @@
 import { sharedStyle } from '/app.js';
+import { fetchSVG } from '../../shared/fetch-svg.js';
 
 import { tCFooterTemplate } from './footer.template.js';
 import tCFooterStyle from './footer.style.js';
@@ -31,13 +32,11 @@ export class TCFooter extends HTMLElement {
         ];
 
         svgPaths.forEach((svgPath, index) => {
-            fetch(svgPath)
-                .then((response) => response.text())
-                .then((svgContent) => {
-                    this.shadowRoot.querySelectorAll('ul li .link .icon')[
-                        index
-                    ].innerHTML = svgContent;
-                });
+            fetchSVG(svgPath, (svgContent) => {
+                this.shadowRoot.querySelectorAll('ul li .link .icon')[
+                    index
+                ].innerHTML = svgContent;
+            });
         });
     }
 }

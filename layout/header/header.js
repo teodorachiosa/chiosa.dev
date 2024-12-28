@@ -1,4 +1,5 @@
 import { sharedStyle } from '/app.js';
+import { fetchSVG } from '../../shared/fetch-svg.js';
 
 import { tCHeaderTemplate } from './header.template.js';
 import tCHeaderStyle from './header.style.js';
@@ -25,11 +26,9 @@ export class TCHeader extends HTMLElement {
     loadLogo() {
         const logoPath = 'assets/logo.svg';
 
-        fetch(logoPath)
-            .then((response) => response.text())
-            .then((logoContent) => {
-                this.shadowRoot.querySelector('.logo').innerHTML = logoContent;
-            });
+        fetchSVG(logoPath, (svgContent) => {
+            this.shadowRoot.querySelector('.logo').innerHTML = svgContent;
+        });
     }
 }
 

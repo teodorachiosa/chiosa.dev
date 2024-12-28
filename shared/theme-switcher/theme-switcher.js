@@ -1,4 +1,5 @@
 import { sharedStyle } from '/app.js';
+import { fetchSVG } from '../../shared/fetch-svg.js';
 
 import { tCThemeSwitcherTemplate } from './theme-switcher.template.js';
 import tCThemeSwitcherStyle from './theme-switcher.style.js';
@@ -52,12 +53,10 @@ export class TCThemeSwitcher extends HTMLElement {
                     : 'assets/sun.svg';
         }
 
-        fetch(svgPath)
-            .then((response) => response.text())
-            .then((svgContent) => {
-                this.themeSwitcherButton.querySelector('.icon').innerHTML =
-                    svgContent;
-            });
+        fetchSVG(svgPath, (svgContent) => {
+            this.themeSwitcherButton.querySelector('.icon').innerHTML =
+                svgContent;
+        });
 
         this.updateButtonProperties();
     }

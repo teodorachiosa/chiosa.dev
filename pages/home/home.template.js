@@ -4,8 +4,8 @@ export const tCHomeTemplate = html`
     <div class="avatar-and-text-wrapper">
         <div class="avatar gradient-background--before">
             <img
-                src="assets/avatar.png"
-                alt="photo of Teodora, smiling at the camera"
+                src="assets/avatar.webp"
+                alt="Teodora, smiling at the camera"
                 class="avatar-img"
             />
             <div class="decoration-stars"></div>

@@ -1,4 +1,5 @@
 import { sharedStyle } from '/app.js';
+import { fetchSVG } from '../../shared/fetch-svg.js';
 
 import { tCHomeTemplate } from './home.template.js';
 import tCHomeStyle from './home.style.js';
@@ -25,15 +26,13 @@ export class TCHome extends HTMLElement {
 
     addDecorationStars() {
         const svgPath = 'assets/stars.svg';
-        fetch(svgPath)
-            .then((response) => response.text())
-            .then((svgContent) => {
-                this.shadowRoot
-                    .querySelectorAll('.decoration-stars')
-                    .forEach((element) => {
-                        element.innerHTML = svgContent;
-                    });
-            });
+        fetchSVG(svgPath, (svgContent) => {
+            this.shadowRoot
+                .querySelectorAll('.decoration-stars')
+                .forEach((element) => {
+                    element.innerHTML = svgContent;
+                });
+        });
     }
 }
 
