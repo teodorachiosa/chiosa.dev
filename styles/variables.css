@@ -1,0 +1,218 @@
+:root {
+    color-scheme: light dark;
+
+    /* LIGHT MODE */
+    --l-shadow: color-mix(in hsl, var(--background), #000 20%);
+    --l-body: #141123;
+    --l-background: #f7e4ff;
+    --l-sky-gradient-position: center bottom;
+    --l-gradient-color-dark: rgb(105, 84, 197);
+    --l-gradient-color-medium: rgb(209, 132, 174);
+    --l-gradient-color-light: rgb(243, 186, 148);
+
+    --l-cloud-top-left-color-1: pink;
+    --l-cloud-top-left-color-2: #6d5f9a;
+    --l-cloud-top-left-color-3: purple;
+    --l-cloud-top-left-color-4: orange;
+    --l-cloud-top-left-color-5: pink;
+
+    --l-cloud-bottom-left-color-1: pink;
+    --l-cloud-bottom-left-color-2: #6d5f9a;
+    --l-cloud-bottom-left-color-3: purple;
+    --l-cloud-bottom-left-color-4: orange;
+    --l-cloud-bottom-left-color-5: pink;
+
+    --l-cloud-top-right-color-1: pink;
+    --l-cloud-top-right-color-2: orange;
+    --l-cloud-top-right-color-3: pink;
+    --l-cloud-top-right-color-4: purple;
+
+    --l-cloud-bottom-right-color-1: white;
+    --l-cloud-bottom-right-color-2: orange;
+    --l-cloud-bottom-right-color-3: pink;
+    --l-cloud-bottom-right-color-4: purple;
+
+    --l-cloud-blended-bottom-right-color-1: pink;
+    --l-cloud-blended-bottom-right-color-2: purple;
+
+    --l-cloud-front-bottom-right-color-1: pink;
+    --l-cloud-front-bottom-right-color-2: purple;
+    --l-cloud-front-bottom-right-color-3: teal;
+    --l-cloud-front-bottom-right-color-4: purple;
+
+    /* DARK MODE */
+    --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
+    --d-body: #fff;
+    --d-background: #141123;
+    --d-sky-gradient-position: center top;
+    --d-gradient-color-dark: rgb(20, 14, 48);
+    --d-gradient-color-medium: rgb(81, 77, 134);
+    --d-gradient-color-light: rgb(70, 162, 172);
+
+    --d-cloud-top-left-color-1: #a8acbe;
+    --d-cloud-top-left-color-2: #6d5f9a;
+    --d-cloud-top-left-color-3: #4d5e95;
+    --d-cloud-top-left-color-4: #272f64;
+    --d-cloud-top-left-color-5: #2e5d90;
+
+    --d-cloud-bottom-left-color-1: #a8acbe;
+    --d-cloud-bottom-left-color-2: #3c478b;
+    --d-cloud-bottom-left-color-3: #2e5d90;
+    --d-cloud-bottom-left-color-4: #5c74a4;
+    --d-cloud-bottom-left-color-5: #4492b1;
+
+    --d-cloud-top-right-color-1: #a8acbe;
+    --d-cloud-top-right-color-2: #6d5f9a;
+    --d-cloud-top-right-color-3: #4d5e95;
+    --d-cloud-top-right-color-4: #272f64;
+
+    --d-cloud-bottom-right-color-1: #ffffff;
+    --d-cloud-bottom-right-color-2: #c89cda;
+    --d-cloud-bottom-right-color-3: #4567a6;
+    --d-cloud-bottom-right-color-4: #553f7d;
+
+    --d-cloud-blended-bottom-right-color-1: #48789c;
+    --d-cloud-blended-bottom-right-color-2: #553f7d;
+
+    --d-cloud-front-bottom-right-color-1: #dec3e8;
+    --d-cloud-front-bottom-right-color-2: #5c74a4;
+    --d-cloud-front-bottom-right-color-3: #504a83;
+    --d-cloud-front-bottom-right-color-4: #3c478b;
+
+    /* GENERIC (LIGHT/DARK) */
+    --shadow: light-dark(var(--l-shadow), var(--d-shadow));
+    --body: light-dark(var(--l-body), var(--d-body));
+    --background: light-dark(var(--l-background), var(--d-background));
+    --sky-gradient-color-dark: light-dark(
+        var(--l-gradient-color-dark),
+        var(--d-gradient-color-dark)
+    );
+    --sky-gradient-color-medium: light-dark(
+        var(--l-gradient-color-medium),
+        var(--d-gradient-color-medium)
+    );
+    --sky-gradient-color-light: light-dark(
+        var(--l-gradient-color-light),
+        var(--d-gradient-color-light)
+    );
+
+    /* ======================= */
+
+    --cloud-top-left-color-1: light-dark(
+        var(--l-cloud-top-left-color-1),
+        var(--d-cloud-top-left-color-1)
+    );
+    --cloud-top-left-color-2: light-dark(
+        var(--l-cloud-top-left-color-2),
+        var(--d-cloud-top-left-color-2)
+    );
+    --cloud-top-left-color-3: light-dark(
+        var(--l-cloud-top-left-color-3),
+        var(--d-cloud-top-left-color-3)
+    );
+    --cloud-top-left-color-4: light-dark(
+        var(--l-cloud-top-left-color-4),
+        var(--d-cloud-top-left-color-4)
+    );
+    --cloud-top-left-color-5: light-dark(
+        var(--l-cloud-top-left-color-5),
+        var(--d-cloud-top-left-color-5)
+    );
+
+    /* ======================= */
+
+    --cloud-bottom-left-color-1: light-dark(
+        var(--l-cloud-bottom-left-color-1),
+        var(--d-cloud-bottom-left-color-1)
+    );
+    --cloud-bottom-left-color-2: light-dark(
+        var(--l-cloud-bottom-left-color-2),
+        var(--d-cloud-bottom-left-color-2)
+    );
+    --cloud-bottom-left-color-3: light-dark(
+        var(--l-cloud-bottom-left-color-3),
+        var(--d-cloud-bottom-left-color-3)
+    );
+    --cloud-bottom-left-color-4: light-dark(
+        var(--l-cloud-bottom-left-color-4),
+        var(--d-cloud-bottom-left-color-4)
+    );
+    --cloud-bottom-left-color-5: light-dark(
+        var(--l-cloud-bottom-left-color-5),
+        var(--d-cloud-bottom-left-color-5)
+    );
+
+    /* ======================= */
+
+    --cloud-top-right-color-1: light-dark(
+        var(--l-cloud-top-right-color-1),
+        var(--d-cloud-top-right-color-1)
+    );
+    --cloud-top-right-color-2: light-dark(
+        var(--l-cloud-top-right-color-2),
+        var(--d-cloud-top-right-color-2)
+    );
+    --cloud-top-right-color-3: light-dark(
+        var(--l-cloud-top-right-color-3),
+        var(--d-cloud-top-right-color-3)
+    );
+    --cloud-top-right-color-4: light-dark(
+        var(--l-cloud-top-right-color-4),
+        var(--d-cloud-top-right-color-4)
+    );
+
+    /* ======================= */
+
+    --cloud-bottom-right-color-1: light-dark(
+        var(--l-cloud-bottom-right-color-1),
+        var(--d-cloud-bottom-right-color-1)
+    );
+    --cloud-bottom-right-color-2: light-dark(
+        var(--l-cloud-bottom-right-color-2),
+        var(--d-cloud-bottom-right-color-2)
+    );
+    --cloud-bottom-right-color-3: light-dark(
+        var(--l-cloud-bottom-right-color-3),
+        var(--d-cloud-bottom-right-color-3)
+    );
+    --cloud-bottom-right-color-4: light-dark(
+        var(--l-cloud-bottom-right-color-4),
+        var(--d-cloud-bottom-right-color-4)
+    );
+
+    /* ======================= */
+
+    --cloud-blended-bottom-right-color-1: light-dark(
+        var(--l-cloud-blended-bottom-right-color-1),
+        var(--d-cloud-blended-bottom-right-color-1)
+    );
+    --cloud-blended-bottom-right-color-2: light-dark(
+        var(--l-cloud-blended-bottom-right-color-2),
+        var(--d-cloud-blended-bottom-right-color-2)
+    );
+
+    /* ======================= */
+
+    --cloud-front-bottom-right-color-1: light-dark(
+        var(--l-cloud-front-bottom-right-color-1),
+        var(--d-cloud-front-bottom-right-color-1)
+    );
+    --cloud-front-bottom-right-color-2: light-dark(
+        var(--l-cloud-front-bottom-right-color-2),
+        var(--d-cloud-front-bottom-right-color-2)
+    );
+    --cloud-front-bottom-right-color-3: light-dark(
+        var(--l-cloud-front-bottom-right-color-1),
+        var(--d-cloud-front-bottom-right-color-1)
+    );
+    --cloud-front-bottom-right-color-4: light-dark(
+        var(--l-cloud-front-bottom-right-color-2),
+        var(--d-cloud-front-bottom-right-color-2)
+    );
+
+    /* OTHER */
+    --short-animation: 0.2s;
+    --medium-animation: 0.4s;
+    --background-image: 'none';
+    --unit: 1vmin;
+}

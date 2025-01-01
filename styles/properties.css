@@ -1,0 +1,173 @@
+@property --sky-gradient-color-dark {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --sky-gradient-color-medium {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --sky-gradient-color-light {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-top-left-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-left-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-left-color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-left-color-4 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-left-color-5 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-bottom-left-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-left-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-left-color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-left-color-4 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-left-color-5 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-top-right-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-right-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-right-color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-top-right-color-4 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-bottom-right-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-right-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-right-color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-bottom-right-color-4 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-blended-bottom-right-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-blended-bottom-right-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+/* ======================= */
+
+@property --cloud-front-bottom-right-color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-front-bottom-right-color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-front-bottom-right-color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+
+@property --cloud-front-bottom-right-color-4 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}

@@ -1,66 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import 'styles/properties.css';
+@import 'styles/variables.css';
 @import 'styles/shared.css';
-
-@property --sky-gradient-color-dark {
-    syntax: '<color>';
-    inherits: true;
-    initial-value: transparent;
-}
-
-@property --sky-gradient-color-medium {
-    syntax: '<color>';
-    inherits: true;
-    initial-value: transparent;
-}
-
-@property --sky-gradient-color-light {
-    syntax: '<color>';
-    inherits: true;
-    initial-value: transparent;
-}
-
-:root {
-    color-scheme: light dark;
-
-    /* LIGHT MODE */
-    --l-shadow: color-mix(in hsl, var(--background), #000 20%);
-    --l-body: #141123;
-    --l-background: #f7e4ff;
-    --l-sky-gradient-position: center bottom;
-    --l-gradient-color-dark: rgb(105, 84, 197);
-    --l-gradient-color-medium: rgb(209, 132, 174);
-    --l-gradient-color-light: rgb(243, 186, 148);
-
-    /* DARK MODE */
-    --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
-    --d-body: #fff;
-    --d-background: #141123;
-    --d-sky-gradient-position: center top;
-    --d-gradient-color-dark: rgb(20, 14, 48);
-    --d-gradient-color-medium: rgb(81, 77, 134);
-    --d-gradient-color-light: rgb(70, 162, 172);
-
-    /* GENERIC (LIGHT/DARK) */
-    --shadow: light-dark(var(--l-shadow), var(--d-shadow));
-    --body: light-dark(var(--l-body), var(--d-body));
-    --background: light-dark(var(--l-background), var(--d-background));
-    --sky-gradient-color-dark: light-dark(
-        var(--l-gradient-color-dark),
-        var(--d-gradient-color-dark)
-    );
-    --sky-gradient-color-medium: light-dark(
-        var(--l-gradient-color-medium),
-        var(--d-gradient-color-medium)
-    );
-    --sky-gradient-color-light: light-dark(
-        var(--l-gradient-color-light),
-        var(--d-gradient-color-light)
-    );
-
-    /* OTHER */
-    --short-animation: 0.2s;
-    --medium-animation: 0.3s;
-}
 
 html {
     height: 100vh;

@@ -39,13 +39,15 @@ button {
     outline-offset: 2px;
 }
 
-.gradient-background {
-    --sky-gradient: linear-gradient(
+.main-gradient-background {
+    --background-image: linear-gradient(
         -160deg in oklch,
         var(--sky-gradient-color-dark),
         var(--sky-gradient-color-medium),
         var(--sky-gradient-color-light)
     );
+}
 
-    background-image: var(--sky-gradient);
+.background-image {
+    background-image: var(--background-image);
 }
