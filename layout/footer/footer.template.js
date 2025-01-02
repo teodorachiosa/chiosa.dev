@@ -49,7 +49,7 @@ export const tCFooterTemplate = html`
                 >
             </li>
             <li>
-                <a class="link mail" href="mailto:placeholder@mail.com">
+                <a class="link mail" href="mailto:teodora@chiosa.dev">
                     <span class="icon"></span>
                     <span class="text"
                         ><span>Email</span>
