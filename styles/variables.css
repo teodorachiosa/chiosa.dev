@@ -6,53 +6,53 @@
     --l-body: #141123;
     --l-background: #f7e4ff;
     --l-sky-gradient-position: center bottom;
-    --l-gradient-color-dark: rgb(105, 84, 197);
-    --l-gradient-color-medium: rgb(209, 132, 174);
-    --l-gradient-color-light: rgb(243, 186, 148);
+    --l-gradient-color-dark: #6954c5;
+    --l-gradient-color-medium: #d184ae;
+    --l-gradient-color-light: #f3ba94;
 
-    --l-cloud-top-left-color-1: pink;
-    --l-cloud-top-left-color-2: #6d5f9a;
-    --l-cloud-top-left-color-3: purple;
-    --l-cloud-top-left-color-4: orange;
-    --l-cloud-top-left-color-5: pink;
+    --l-cloud-top-left-color-1: #f8d2a7;
+    --l-cloud-top-left-color-2: #d1a984;
+    --l-cloud-top-left-color-3: #d184ae;
+    --l-cloud-top-left-color-4: #8c5f9a;
+    --l-cloud-top-left-color-5: #6d5f9a;
 
-    --l-cloud-bottom-left-color-1: pink;
-    --l-cloud-bottom-left-color-2: #6d5f9a;
-    --l-cloud-bottom-left-color-3: purple;
-    --l-cloud-bottom-left-color-4: orange;
-    --l-cloud-bottom-left-color-5: pink;
+    --l-cloud-bottom-left-color-1: #ffffff;
+    --l-cloud-bottom-left-color-2: #ec9e8a;
+    --l-cloud-bottom-left-color-3: #c77497;
+    --l-cloud-bottom-left-color-4: #ca7ea2;
+    --l-cloud-bottom-left-color-5: #e7b192;
 
-    --l-cloud-top-right-color-1: pink;
-    --l-cloud-top-right-color-2: orange;
-    --l-cloud-top-right-color-3: pink;
-    --l-cloud-top-right-color-4: purple;
+    --l-cloud-top-right-color-1: #ffffff;
+    --l-cloud-top-right-color-2: #f0cfb0;
+    --l-cloud-top-right-color-3: #d184ae;
+    --l-cloud-top-right-color-4: #af52a0;
 
-    --l-cloud-bottom-right-color-1: white;
-    --l-cloud-bottom-right-color-2: orange;
-    --l-cloud-bottom-right-color-3: pink;
-    --l-cloud-bottom-right-color-4: purple;
+    --l-cloud-bottom-right-color-1: #ffffff;
+    --l-cloud-bottom-right-color-2: #f3ba94;
+    --l-cloud-bottom-right-color-3: #d184ae;
+    --l-cloud-bottom-right-color-4: #8c5f9a;
 
-    --l-cloud-blended-bottom-right-color-1: pink;
-    --l-cloud-blended-bottom-right-color-2: purple;
+    --l-cloud-blended-bottom-right-color-1: #f3ba94;
+    --l-cloud-blended-bottom-right-color-2: #8c5f9a;
 
-    --l-cloud-front-bottom-right-color-1: pink;
-    --l-cloud-front-bottom-right-color-2: purple;
-    --l-cloud-front-bottom-right-color-3: teal;
-    --l-cloud-front-bottom-right-color-4: purple;
+    --l-cloud-front-bottom-right-color-1: #f3ba94;
+    --l-cloud-front-bottom-right-color-2: #d184ae;
+    --l-cloud-front-bottom-right-color-3: #8c5f9a;
+    --l-cloud-front-bottom-right-color-4: #6d5f9a;
 
-    --l-moon-or-sun-color-1: white;
-    --l-moon-or-sun-color-2: wheat;
-    --l-moon-or-sun-color-3: pink;
-    --l-moon-or-sun-color-4: wheat;
+    --l-moon-or-sun-color-1: #ffffff;
+    --l-moon-or-sun-color-2: #f8e0c4;
+    --l-moon-or-sun-color-3: #f7c4cf;
+    --l-moon-or-sun-color-4: #f8d2a7;
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #fff;
     --d-background: #141123;
     --d-sky-gradient-position: center top;
-    --d-gradient-color-dark: rgb(20, 14, 48);
-    --d-gradient-color-medium: rgb(81, 77, 134);
-    --d-gradient-color-light: rgb(70, 162, 172);
+    --d-gradient-color-dark: #141123;
+    --d-gradient-color-medium: #4f4d86;
+    --d-gradient-color-light: #46a2ac;
 
     --d-cloud-top-left-color-1: #a8acbe;
     --d-cloud-top-left-color-2: #6d5f9a;

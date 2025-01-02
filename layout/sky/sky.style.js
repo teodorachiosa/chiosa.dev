@@ -30,7 +30,7 @@ tCSkyStyle.replaceSync(css`
                 position: absolute;
                 width: calc(11 * var(--unit));
                 aspect-ratio: 1 / 1;
-                top: 48%;
+                top: 58%;
                 left: calc(-3 * var(--unit));
                 border-radius: 50%;
 
@@ -71,8 +71,9 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-top-left-color-2),
                         var(--cloud-top-left-color-3),
                         var(--cloud-top-left-color-4),
-                        var(--cloud-top-left-color-5)
+                        var(--cloud-top-left-color-5) 80%
                     );
+                    background-size: 220% auto;
                     transition-property: --cloud-top-left-color-1,
                         --cloud-top-left-color-2, --cloud-top-left-color-3,
                         --cloud-top-left-color-4, --cloud-top-left-color-5;
@@ -80,8 +81,8 @@ tCSkyStyle.replaceSync(css`
 
                 &.bottom-left-cloud-gradient {
                     --background-image: linear-gradient(
-                        144deg in oklch,
-                        var(--cloud-bottom-left-color-1),
+                        145deg in oklch,
+                        var(--cloud-bottom-left-color-1) 15%,
                         var(--cloud-bottom-left-color-2),
                         var(--cloud-bottom-left-color-3),
                         var(--cloud-bottom-left-color-4),
@@ -94,12 +95,14 @@ tCSkyStyle.replaceSync(css`
 
                 &.top-right-cloud-gradient {
                     --background-image: linear-gradient(
-                        144deg in oklch,
+                        100deg in oklch,
                         var(--cloud-top-right-color-1),
                         var(--cloud-top-right-color-2),
                         var(--cloud-top-right-color-3),
                         var(--cloud-top-right-color-4)
                     );
+                    background-size: 180% auto;
+                    background-position-x: 100%;
                     transition-property: --cloud-top-right-color-1,
                         --cloud-top-right-color-2, --cloud-top-right-color-3,
                         --cloud-top-right-color-4;
@@ -107,7 +110,7 @@ tCSkyStyle.replaceSync(css`
 
                 &.bottom-right-cloud-gradient {
                     --background-image: linear-gradient(
-                        144deg in oklch,
+                        145deg in oklch,
                         var(--cloud-bottom-right-color-1),
                         var(--cloud-bottom-right-color-2),
                         var(--cloud-bottom-right-color-3),
@@ -121,7 +124,7 @@ tCSkyStyle.replaceSync(css`
 
                 &.blended-bottom-right-cloud-gradient {
                     --background-image: linear-gradient(
-                        144deg in oklch,
+                        145deg in oklch,
                         var(--cloud-blended-bottom-right-color-1),
                         var(--cloud-blended-bottom-right-color-2)
                     );
@@ -131,8 +134,8 @@ tCSkyStyle.replaceSync(css`
 
                 &.front-bottom-right-cloud-gradient {
                     --background-image: linear-gradient(
-                        144deg in oklch,
-                        var(--cloud-front-bottom-right-color-1),
+                        125deg in oklch,
+                        var(--cloud-front-bottom-right-color-1) 5%,
                         var(--cloud-front-bottom-right-color-2),
                         var(--cloud-front-bottom-right-color-3),
                         var(--cloud-front-bottom-right-color-4)
@@ -154,7 +157,7 @@ tCSkyStyle.replaceSync(css`
                 &.bottom-left {
                     width: calc(27.2 * var(--unit));
                     aspect-ratio: 271 / 286;
-                    top: 45%;
+                    top: 55%;
                     left: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-left.svg');
                 }
@@ -162,7 +165,7 @@ tCSkyStyle.replaceSync(css`
                 &.top-right {
                     width: calc(23 * var(--unit));
                     aspect-ratio: 233 / 328;
-                    top: 17%;
+                    top: 14%;
                     right: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-top-right.svg');
                 }
@@ -187,7 +190,7 @@ tCSkyStyle.replaceSync(css`
                     width: calc(26 * var(--unit));
                     aspect-ratio: 281 / 296;
                     bottom: -8.2%;
-                    right: calc(-4 * var(--unit));
+                    right: calc(-3.5 * var(--unit));
                     mask-image: url('assets/illustration/cloud-front-bottom-right.svg');
                 }
             }
