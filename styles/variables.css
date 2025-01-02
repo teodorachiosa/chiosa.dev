@@ -40,6 +40,11 @@
     --l-cloud-front-bottom-right-color-3: teal;
     --l-cloud-front-bottom-right-color-4: purple;
 
+    --l-moon-or-sun-color-1: white;
+    --l-moon-or-sun-color-2: wheat;
+    --l-moon-or-sun-color-3: pink;
+    --l-moon-or-sun-color-4: wheat;
+
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #fff;
@@ -78,6 +83,11 @@
     --d-cloud-front-bottom-right-color-2: #5c74a4;
     --d-cloud-front-bottom-right-color-3: #504a83;
     --d-cloud-front-bottom-right-color-4: #3c478b;
+
+    --d-moon-or-sun-color-1: #ffffff;
+    --d-moon-or-sun-color-2: #f1fbf7;
+    --d-moon-or-sun-color-3: #e7d2e7;
+    --d-moon-or-sun-color-4: #ced8e1;
 
     /* GENERIC (LIGHT/DARK) */
     --shadow: light-dark(var(--l-shadow), var(--d-shadow));
@@ -202,12 +212,31 @@
         var(--d-cloud-front-bottom-right-color-2)
     );
     --cloud-front-bottom-right-color-3: light-dark(
-        var(--l-cloud-front-bottom-right-color-1),
-        var(--d-cloud-front-bottom-right-color-1)
+        var(--l-cloud-front-bottom-right-color-3),
+        var(--d-cloud-front-bottom-right-color-3)
     );
     --cloud-front-bottom-right-color-4: light-dark(
-        var(--l-cloud-front-bottom-right-color-2),
-        var(--d-cloud-front-bottom-right-color-2)
+        var(--l-cloud-front-bottom-right-color-4),
+        var(--d-cloud-front-bottom-right-color-4)
+    );
+
+    /* ======================= */
+
+    --moon-or-sun-color-1: light-dark(
+        var(--l-moon-or-sun-color-1),
+        var(--d-moon-or-sun-color-1)
+    );
+    --moon-or-sun-color-2: light-dark(
+        var(--l-moon-or-sun-color-2),
+        var(--d-moon-or-sun-color-2)
+    );
+    --moon-or-sun-color-3: light-dark(
+        var(--l-moon-or-sun-color-3),
+        var(--d-moon-or-sun-color-3)
+    );
+    --moon-or-sun-color-4: light-dark(
+        var(--l-moon-or-sun-color-4),
+        var(--d-moon-or-sun-color-4)
     );
 
     /* OTHER */

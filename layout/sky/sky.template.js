@@ -2,7 +2,7 @@ const html = String.raw;
 
 export const tCSkyTemplate = html`
     <div class="sky-container main-gradient-background background-image">
-        <div class="moon"></div>
+        <div class="moon background-image"></div>
         <div
             class="cloud top-left top-left-cloud-gradient background-image"
         ></div>

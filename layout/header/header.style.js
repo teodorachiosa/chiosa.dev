@@ -29,7 +29,6 @@ tCHeaderStyle.replaceSync(css`
                     border-radius: 50%;
                     filter: blur(0.5rem);
                     opacity: 0.05;
-                    animation: breathe 10s ease infinite;
                 }
 
                 &::after {
@@ -44,27 +43,13 @@ tCHeaderStyle.replaceSync(css`
                     border-radius: 50%;
                     filter: blur(2rem);
                     opacity: 0.3;
-                    animation: breathe 10s ease infinite;
-                    animation-delay: -4s;
                 }
 
                 svg * {
-                    transition: ease 0.5s;
+                    transition: ease var(--medium-animation);
                     transition-property: fill, stroke;
                 }
             }
-        }
-    }
-
-    @keyframes breathe {
-        0% {
-            scale: 0.4;
-        }
-        50% {
-            scale: 1;
-        }
-        100% {
-            scale: 0.4;
         }
     }
 `);

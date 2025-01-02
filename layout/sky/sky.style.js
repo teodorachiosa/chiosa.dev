@@ -18,6 +18,45 @@ tCSkyStyle.replaceSync(css`
             transition-property: --sky-gradient-color-dark,
                 --sky-gradient-color-medium, --sky-gradient-color-light;
 
+            .moon {
+                --background-image: linear-gradient(
+                    144deg in oklch,
+                    var(--moon-or-sun-color-1),
+                    var(--moon-or-sun-color-2),
+                    var(--moon-or-sun-color-3),
+                    var(--moon-or-sun-color-4)
+                );
+
+                position: absolute;
+                width: calc(11 * var(--unit));
+                aspect-ratio: 1 / 1;
+                top: 48%;
+                left: calc(-3 * var(--unit));
+                border-radius: 50%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--moon-or-sun-color-1);
+                    border-radius: 50%;
+                    opacity: 0.2;
+                    scale: 2;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--moon-or-sun-color-1);
+                    border-radius: 50%;
+                    opacity: 0.2;
+                    scale: 2.5;
+                }
+            }
+
             .cloud {
                 position: absolute;
                 mask-repeat: no-repeat;
@@ -36,21 +75,7 @@ tCSkyStyle.replaceSync(css`
                     );
                     transition-property: --cloud-top-left-color-1,
                         --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
-                        --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
-                        --cloud-bottom-right-color-2,
-                        --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
-                        --cloud-front-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-3,
-                        --cloud-front-bottom-right-color-4;
+                        --cloud-top-left-color-4, --cloud-top-left-color-5;
                 }
 
                 &.bottom-left-cloud-gradient {
@@ -62,23 +87,9 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-bottom-left-color-4),
                         var(--cloud-bottom-left-color-5)
                     );
-                    transition-property: --cloud-top-left-color-1,
-                        --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
-                        --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
-                        --cloud-bottom-right-color-2,
-                        --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
-                        --cloud-front-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-3,
-                        --cloud-front-bottom-right-color-4;
+                    transition-property: --cloud-bottom-left-color-1,
+                        --cloud-bottom-left-color-2, --cloud-bottom-left-color-3,
+                        --cloud-bottom-left-color-4, --cloud-bottom-left-color-5;
                 }
 
                 &.top-right-cloud-gradient {
@@ -89,23 +100,9 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-top-right-color-3),
                         var(--cloud-top-right-color-4)
                     );
-                    transition-property: --cloud-top-left-color-1,
-                        --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
+                    transition-property: --cloud-top-right-color-1,
                         --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
-                        --cloud-bottom-right-color-2,
-                        --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
-                        --cloud-front-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-3,
-                        --cloud-front-bottom-right-color-4;
+                        --cloud-top-right-color-4;
                 }
 
                 &.bottom-right-cloud-gradient {
@@ -116,23 +113,10 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-bottom-right-color-3),
                         var(--cloud-bottom-right-color-4)
                     );
-                    transition-property: --cloud-top-left-color-1,
-                        --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
-                        --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
+                    transition-property: --cloud-bottom-right-color-1,
                         --cloud-bottom-right-color-2,
                         --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
-                        --cloud-front-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-3,
-                        --cloud-front-bottom-right-color-4;
+                        --cloud-bottom-right-color-4;
                 }
 
                 &.blended-bottom-right-cloud-gradient {
@@ -141,23 +125,8 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-blended-bottom-right-color-1),
                         var(--cloud-blended-bottom-right-color-2)
                     );
-                    transition-property: --cloud-top-left-color-1,
-                        --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
-                        --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
-                        --cloud-bottom-right-color-2,
-                        --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
-                        --cloud-front-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-3,
-                        --cloud-front-bottom-right-color-4;
+                    transition-property: --cloud-blended-bottom-right-color-1,
+                        --cloud-blended-bottom-right-color-2;
                 }
 
                 &.front-bottom-right-cloud-gradient {
@@ -168,20 +137,7 @@ tCSkyStyle.replaceSync(css`
                         var(--cloud-front-bottom-right-color-3),
                         var(--cloud-front-bottom-right-color-4)
                     );
-                    transition-property: --cloud-top-left-color-1,
-                        --cloud-top-left-color-2, --cloud-top-left-color-3,
-                        --cloud-top-left-color-4, --cloud-top-left-color-5,
-                        --cloud-bottom-left-color-1, --cloud-bottom-left-color-2,
-                        --cloud-bottom-left-color-3, --cloud-bottom-left-color-4,
-                        --cloud-bottom-left-color-5, --cloud-top-right-color-1,
-                        --cloud-top-right-color-2, --cloud-top-right-color-3,
-                        --cloud-top-right-color-4, --cloud-bottom-right-color-1,
-                        --cloud-bottom-right-color-2,
-                        --cloud-bottom-right-color-3,
-                        --cloud-bottom-right-color-4,
-                        --cloud-blended-bottom-right-color-1,
-                        --cloud-blended-bottom-right-color-2,
-                        --cloud-front-bottom-right-color-1,
+                    transition-property: --cloud-front-bottom-right-color-1,
                         --cloud-front-bottom-right-color-2,
                         --cloud-front-bottom-right-color-3,
                         --cloud-front-bottom-right-color-4;
@@ -196,10 +152,10 @@ tCSkyStyle.replaceSync(css`
                 }
 
                 &.bottom-left {
-                    width: calc(27 * var(--unit));
+                    width: calc(27.2 * var(--unit));
                     aspect-ratio: 271 / 286;
                     top: 45%;
-                    left: calc(-2 * var(--unit));
+                    left: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-left.svg');
                 }
 
@@ -228,10 +184,10 @@ tCSkyStyle.replaceSync(css`
                 }
 
                 &.front-bottom-right {
-                    width: calc(28.8 * var(--unit));
+                    width: calc(26 * var(--unit));
                     aspect-ratio: 281 / 296;
-                    bottom: -9.9%;
-                    right: calc(-5 * var(--unit));
+                    bottom: -8.2%;
+                    right: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-front-bottom-right.svg');
                 }
             }
