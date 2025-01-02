@@ -1,4 +1,11 @@
+const svgCache = new Map();
+
 export function fetchSVG(path, callback) {
+    if (svgCache.has(path)) {
+        callback(svgCache.get(path));
+        return;
+    }
+
     fetch(path)
         .then((response) => {
             if (!response.ok) {
@@ -7,6 +14,7 @@ export function fetchSVG(path, callback) {
             return response.text();
         })
         .then((svgContent) => {
+            svgCache.set(path, svgContent);
             callback(svgContent);
         })
         .catch((error) => {
