@@ -12,7 +12,6 @@ export class TCHome extends HTMLElement {
 
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHomeStyle];
-        this.addDecorationStars();
         this.render();
     }
 
@@ -22,17 +21,6 @@ export class TCHome extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `${this.template}`;
-    }
-
-    addDecorationStars() {
-        const svgPath = 'assets/star.svg';
-        fetchSVG(svgPath, (svgContent) => {
-            this.shadowRoot
-                .querySelectorAll('.decoration-star')
-                .forEach((element) => {
-                    element.innerHTML = svgContent;
-                });
-        });
     }
 }
 
