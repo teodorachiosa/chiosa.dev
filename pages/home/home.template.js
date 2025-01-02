@@ -15,7 +15,7 @@ export const tCHomeTemplate = html`
         <div class="intro-text">
             <p>Hi!</p>
             <p>
-                I’m <span class="my-name">Teodora</span>, a front-end developer
+                I’m <span class="my-name">Teodora</span>, a frontend developer
                 and <span class="my-passion">accessibility enthusiast</span>.
             </p>
         </div>
