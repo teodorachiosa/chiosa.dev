@@ -51,3 +51,12 @@ button {
 .background-image {
     background-image: var(--background-image);
 }
+
+@media (prefers-reduced-motion) {
+    *,
+    ::before,
+    ::after {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+    }
+}
