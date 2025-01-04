@@ -2,7 +2,7 @@ const html = String.raw;
 
 export const tCHeaderTemplate = html`
     <header>
-        <a href="#">
+        <a href="/">
             <div class="logo"></div>
             <span class="visually-hidden">Teodora Chiosa - Home</span>
         </a>
