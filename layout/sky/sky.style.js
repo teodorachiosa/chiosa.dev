@@ -66,6 +66,8 @@ tCSkyStyle.replaceSync(css`
                 mask-size: 100%;
                 transition-duration: var(--medium-animation);
                 transition-timing-function: ease;
+                animation: move infinite linear;
+                animation-delay: -10s;
 
                 &.top-left-cloud-gradient {
                     --background-image: linear-gradient(
@@ -155,6 +157,7 @@ tCSkyStyle.replaceSync(css`
                     top: 5%;
                     left: calc(-2.5 * var(--unit));
                     mask-image: url('assets/illustration/cloud-top-left.svg');
+                    animation-duration: 60s;
                 }
 
                 &.bottom-left {
@@ -163,6 +166,7 @@ tCSkyStyle.replaceSync(css`
                     top: 55%;
                     left: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-left.svg');
+                    animation-duration: 55s;
                 }
 
                 &.top-right {
@@ -171,6 +175,7 @@ tCSkyStyle.replaceSync(css`
                     top: 14%;
                     right: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-top-right.svg');
+                    animation-duration: 45s;
                 }
 
                 &.bottom-right {
@@ -179,6 +184,7 @@ tCSkyStyle.replaceSync(css`
                     bottom: -4.5%;
                     right: calc(-10 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-right.svg');
+                    animation-duration: 40s;
                 }
 
                 &.blended-bottom-right {
@@ -187,16 +193,27 @@ tCSkyStyle.replaceSync(css`
                     bottom: -7.8%;
                     right: calc(-1 * var(--unit));
                     mask-image: url('assets/illustration/cloud-blended-bottom-right.svg');
+                    animation-duration: 40s;
                 }
 
                 &.front-bottom-right {
-                    width: calc(26 * var(--unit));
+                    width: calc(25.9 * var(--unit));
                     aspect-ratio: 281 / 296;
                     bottom: -8.2%;
                     right: calc(-3.5 * var(--unit));
                     mask-image: url('assets/illustration/cloud-front-bottom-right.svg');
+                    animation-duration: 40s;
                 }
             }
+        }
+    }
+
+    @keyframes move {
+        0% {
+            translate: -35vw 0;
+        }
+        100% {
+            translate: 35vw 0;
         }
     }
 `);
