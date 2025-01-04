@@ -8,11 +8,11 @@ export class TCMainContainer extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.render();
         this.shadowRoot.adoptedStyleSheets = [
             sharedStyle,
             tCMainContainerStyle,
         ];
-        this.render();
     }
 
     get template() {

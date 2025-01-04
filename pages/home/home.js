@@ -11,8 +11,8 @@ export class TCHome extends HTMLElement {
         document.title = 'Home - Teodora Chiosa';
 
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHomeStyle];
         this.render();
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHomeStyle];
     }
 
     get template() {

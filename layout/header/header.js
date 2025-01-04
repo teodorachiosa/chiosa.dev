@@ -9,10 +9,9 @@ export class TCHeader extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHeaderStyle];
-
-        this.loadLogo();
         this.render();
+        this.loadLogo();
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCHeaderStyle];
     }
 
     get template() {

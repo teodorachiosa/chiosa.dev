@@ -13,11 +13,11 @@ export class TCThemeSwitcher extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
+        this.render();
         this.shadowRoot.adoptedStyleSheets = [
             sharedStyle,
             tCThemeSwitcherStyle,
         ];
-        this.render();
     }
 
     connectedCallback() {

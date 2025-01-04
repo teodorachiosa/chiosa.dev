@@ -9,8 +9,8 @@ export class TCFooter extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCFooterStyle];
         this.render();
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCFooterStyle];
     }
 
     get template() {

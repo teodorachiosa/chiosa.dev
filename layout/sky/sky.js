@@ -8,8 +8,8 @@ export class TCSky extends HTMLElement {
         super();
 
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCSkyStyle];
         this.render();
+        this.shadowRoot.adoptedStyleSheets = [sharedStyle, tCSkyStyle];
     }
 
     get template() {
