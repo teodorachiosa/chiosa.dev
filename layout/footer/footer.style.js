@@ -3,13 +3,17 @@ const tCFooterStyle = new CSSStyleSheet();
 
 tCFooterStyle.replaceSync(css`
     :host {
+        display: flex;
+        justify-content: center;
         margin-top: 10rem;
         container-type: inline-size;
 
         ul {
             display: flex;
             flex-wrap: wrap;
-            column-gap: 2.5rem;
+            justify-content: center;
+            max-width: 50ch;
+            gap: 0.7rem 2.5rem;
             padding: 0;
             list-style: none;
 

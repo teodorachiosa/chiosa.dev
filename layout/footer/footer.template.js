@@ -20,6 +20,21 @@ export const tCFooterTemplate = html`
             </li>
             <li>
                 <a
+                    class="link bsky"
+                    href="https://bsky.app/profile/chiosa.dev"
+                    target="_blank"
+                >
+                    <span class="icon"></span>
+                    <span class="text">
+                        <span>Bluesky</span>
+                        <span class="visually-hidden"
+                            >(opens in a new tab)</span
+                        >
+                    </span></a
+                >
+            </li>
+            <li>
+                <a
                     class="link codepen"
                     href="https://codepen.io/teodorachiosa"
                     target="_blank"
