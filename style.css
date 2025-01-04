@@ -27,3 +27,7 @@ body {
         display: none;
     }
 }
+
+.page-not-found {
+    font-size: 2rem;
+}
