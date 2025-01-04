@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import 'styles/properties.css';
 @import 'styles/variables.css';
 @import 'styles/shared.css';
+@import 'styles/fonts.css';
 
 html {
     height: 100vh;
