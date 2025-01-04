@@ -24,10 +24,7 @@ tCHomeStyle.replaceSync(css`
                 .avatar-background {
                     z-index: -1;
                     position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
+                    inset: 0;
                     border-radius: 50%;
                     transition-duration: var(--medium-animation);
                     transition-timing-function: ease;

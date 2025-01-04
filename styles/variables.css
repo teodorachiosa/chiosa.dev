@@ -40,10 +40,10 @@
     --l-cloud-front-bottom-right-color-3: #8c5f9a;
     --l-cloud-front-bottom-right-color-4: #6d5f9a;
 
-    --l-moon-or-sun-color-1: #ffffff;
-    --l-moon-or-sun-color-2: #f8e0c4;
-    --l-moon-or-sun-color-3: #f7c4cf;
-    --l-moon-or-sun-color-4: #f8d2a7;
+    --l-moon-or-sun-color-1: #ffe6ca;
+    --l-moon-or-sun-color-2: #ffffff;
+    --l-moon-or-sun-color-3: #ffeedb;
+    --l-moon-or-sun-color-4: #ffffff;
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
@@ -86,8 +86,8 @@
 
     --d-moon-or-sun-color-1: #ffffff;
     --d-moon-or-sun-color-2: #f1fbf7;
-    --d-moon-or-sun-color-3: #e7d2e7;
-    --d-moon-or-sun-color-4: #ced8e1;
+    --d-moon-or-sun-color-3: transparent;
+    --d-moon-or-sun-color-4: transparent;
 
     /* GENERIC (LIGHT/DARK) */
     --shadow: light-dark(var(--l-shadow), var(--d-shadow));

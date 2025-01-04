@@ -152,7 +152,7 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     watchForColorSchemeMediaChanges() {
-        this.getPrefersDarkMedia().addEventListener('change', (event) => {
+        this.getPrefersDarkMedia().addEventListener('change', () => {
             this.updateButton();
         });
     }

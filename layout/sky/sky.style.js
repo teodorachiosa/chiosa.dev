@@ -3,10 +3,10 @@ const tCSkyStyle = new CSSStyleSheet();
 
 tCSkyStyle.replaceSync(css`
     :host {
+        display: block;
         flex-shrink: 0;
         width: 30%;
         height: 100%;
-        display: block;
 
         .sky-container {
             position: relative;
@@ -18,42 +18,45 @@ tCSkyStyle.replaceSync(css`
             transition-property: --sky-gradient-color-dark,
                 --sky-gradient-color-medium, --sky-gradient-color-light;
 
-            .moon {
-                --background-image: linear-gradient(
-                    144deg in oklch,
-                    var(--moon-or-sun-color-1),
-                    var(--moon-or-sun-color-2),
-                    var(--moon-or-sun-color-3),
-                    var(--moon-or-sun-color-4)
-                );
-
+            .light-source {
                 position: absolute;
-                width: calc(11 * var(--unit));
-                aspect-ratio: 1 / 1;
                 top: 58%;
-                left: calc(-3 * var(--unit));
-                border-radius: 50%;
+                left: calc(-2 * var(--unit));
 
-                &::before {
-                    content: '';
+                .light-source-disc {
+                    --background-image: linear-gradient(
+                        60deg in oklch,
+                        var(--moon-or-sun-color-1),
+                        var(--moon-or-sun-color-2),
+                        var(--moon-or-sun-color-3),
+                        var(--moon-or-sun-color-4)
+                    );
+
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    width: calc(11 * var(--unit));
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    transition: var(--medium-animation) ease;
+                    transition-property: --moon-or-sun-color-1,
+                        --moon-or-sun-color-2, --moon-or-sun-color-3,
+                        --moon-or-sun-color-4;
+                }
+
+                .light-source-glow {
+                    position: absolute;
+                    width: calc(11 * var(--unit));
+                    aspect-ratio: 1 / 1;
                     background: var(--moon-or-sun-color-1);
                     border-radius: 50%;
                     opacity: 0.2;
                     scale: 2;
-                }
+                    pointer-events: none;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background: var(--moon-or-sun-color-1);
-                    border-radius: 50%;
-                    opacity: 0.2;
-                    scale: 2.5;
+                    &.outer {
+                        scale: 2.5;
+                    }
                 }
             }
 
