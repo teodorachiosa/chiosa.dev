@@ -1,5 +1,15 @@
 {
     "name": "@chiosa/dev",
     "version": "1.0.0",
-    "main": "app.js"
+    "main": "app.js",
+    "files": [
+        "assets/fonts",
+        "layout/*",
+        "shared/*",
+        "styles/*",
+        "404.html",
+        "app.js",
+        "favicon.ico",
+        "style.css"
+    ]
 }
