@@ -25,5 +25,9 @@ export const tCSkyTemplate = html`
         <div
             class="cloud front-bottom-right front-bottom-right-cloud-gradient background-image"
         ></div>
+
+        <div class="controls">
+            <button class="animation-toggle"></button>
+        </div>
     </div>
 `;

@@ -18,6 +18,12 @@ tCSkyStyle.replaceSync(css`
             transition-property: --sky-gradient-color-dark,
                 --sky-gradient-color-medium, --sky-gradient-color-light;
 
+            &.animation-disabled {
+                * {
+                    animation-duration: 0s !important;
+                }
+            }
+
             .light-source {
                 position: absolute;
                 top: 58%;
@@ -48,14 +54,16 @@ tCSkyStyle.replaceSync(css`
                     position: absolute;
                     width: calc(11 * var(--unit));
                     aspect-ratio: 1 / 1;
-                    background: var(--moon-or-sun-color-1);
+                    box-shadow: inset 0 0 calc(4 * var(--unit))
+                            calc(2 * var(--unit)) var(--moon-or-sun-color-1),
+                        0 0 0 calc(3 * var(--unit)) var(--moon-or-sun-color-1);
                     border-radius: 50%;
-                    opacity: 0.2;
-                    scale: 2;
+                    opacity: 0.1;
                     pointer-events: none;
+                    animation: breathe infinite 15s ease-in-out;
 
                     &.outer {
-                        scale: 2.5;
+                        animation-delay: -3s;
                     }
                 }
             }
@@ -205,6 +213,35 @@ tCSkyStyle.replaceSync(css`
                     animation-duration: 40s;
                 }
             }
+
+            .animation-toggle {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding: 0.2rem 0.7rem;
+                margin: 1rem;
+                background-color: var(--background);
+                border: none;
+                border-radius: 5rem;
+                opacity: 0.8;
+                transition: var(--short-animation) ease;
+                transition-property: opacity, background-color, translate;
+
+                &:hover,
+                &:focus-visible {
+                    opacity: 1;
+                    translate: -0.1rem -0.1rem;
+                }
+
+                &:active {
+                    translate: 0 0;
+                    background-color: color-mix(
+                        in hsl,
+                        var(--background),
+                        var(--body) 15%
+                    );
+                }
+            }
         }
     }
 
@@ -214,6 +251,18 @@ tCSkyStyle.replaceSync(css`
         }
         100% {
             translate: 35vw 0;
+        }
+    }
+
+    @keyframes breathe {
+        0% {
+            scale: 0.9;
+        }
+        50% {
+            scale: 1.2;
+        }
+        100% {
+            scale: 0.9;
         }
     }
 `);
