@@ -26,7 +26,7 @@ tCHomeStyle.replaceSync(css`
                     position: absolute;
                     inset: 0;
                     border-radius: 50%;
-                    transition-duration: var(--medium-animation);
+                    transition-duration: var(--medium-animation-duration);
                     transition-timing-function: ease;
                     transition-property: --sky-gradient-color-dark,
                         --sky-gradient-color-medium, --sky-gradient-color-light;

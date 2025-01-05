@@ -240,8 +240,16 @@
     );
 
     /* OTHER */
-    --short-animation: 0.2s;
-    --medium-animation: 0.4s;
     --background-image: 'none';
     --unit: 1vmin;
+
+    --short-animation-duration: 0.2s;
+    --medium-animation-duration: 0.4s;
+    --light-source-glow-animation: 15s;
+    --top-left-cloud-animation-duration: 60s;
+    --bottom-left-cloud-animation-duration: 55s;
+    --top-right-cloud-animation-duration: 45s;
+    --bottom-right-cloud-animation-duration: 40s;
+    --blended-bottom-right-cloud-animation-duration: 40s;
+    --front-bottom-right-cloud-animation-duration: 35s;
 }

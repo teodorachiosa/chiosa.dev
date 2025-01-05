@@ -13,7 +13,7 @@ tCSkyStyle.replaceSync(css`
             overflow: hidden;
             width: 100%;
             height: 100%;
-            transition-duration: var(--medium-animation);
+            transition-duration: var(--medium-animation-duration);
             transition-timing-function: ease;
             transition-property: --sky-gradient-color-dark,
                 --sky-gradient-color-medium, --sky-gradient-color-light;
@@ -44,7 +44,7 @@ tCSkyStyle.replaceSync(css`
                     width: calc(11 * var(--unit));
                     aspect-ratio: 1 / 1;
                     border-radius: 50%;
-                    transition: var(--medium-animation) ease;
+                    transition: var(--medium-animation-duration) ease;
                     transition-property: --moon-or-sun-color-1,
                         --moon-or-sun-color-2, --moon-or-sun-color-3,
                         --moon-or-sun-color-4;
@@ -60,7 +60,8 @@ tCSkyStyle.replaceSync(css`
                     border-radius: 50%;
                     opacity: 0.1;
                     pointer-events: none;
-                    animation: breathe infinite 15s ease-in-out;
+                    animation: breathe infinite
+                        var(--light-source-glow-animation) ease-in-out;
 
                     &.outer {
                         animation-delay: -3s;
@@ -72,7 +73,7 @@ tCSkyStyle.replaceSync(css`
                 position: absolute;
                 mask-repeat: no-repeat;
                 mask-size: 100%;
-                transition-duration: var(--medium-animation);
+                transition-duration: var(--medium-animation-duration);
                 transition-timing-function: ease;
                 animation: move infinite linear;
                 animation-delay: -10s;
@@ -165,7 +166,9 @@ tCSkyStyle.replaceSync(css`
                     top: 5%;
                     left: calc(-2.5 * var(--unit));
                     mask-image: url('assets/illustration/cloud-top-left.svg');
-                    animation-duration: 60s;
+                    animation-duration: var(
+                        --top-left-cloud-animation-duration
+                    );
                 }
 
                 &.bottom-left {
@@ -174,7 +177,9 @@ tCSkyStyle.replaceSync(css`
                     top: 55%;
                     left: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-left.svg');
-                    animation-duration: 55s;
+                    animation-duration: var(
+                        --bottom-left-cloud-animation-duration
+                    );
                 }
 
                 &.top-right {
@@ -183,7 +188,9 @@ tCSkyStyle.replaceSync(css`
                     top: 14%;
                     right: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-top-right.svg');
-                    animation-duration: 45s;
+                    animation-duration: var(
+                        --top-right-cloud-animation-duration
+                    );
                 }
 
                 &.bottom-right {
@@ -192,7 +199,9 @@ tCSkyStyle.replaceSync(css`
                     bottom: -4.5%;
                     right: calc(-10 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-right.svg');
-                    animation-duration: 40s;
+                    animation-duration: var(
+                        --bottom-right-cloud-animation-duration
+                    );
                 }
 
                 &.blended-bottom-right {
@@ -201,7 +210,9 @@ tCSkyStyle.replaceSync(css`
                     bottom: -7.8%;
                     right: calc(-1 * var(--unit));
                     mask-image: url('assets/illustration/cloud-blended-bottom-right.svg');
-                    animation-duration: 40s;
+                    animation-duration: var(
+                        --blended-bottom-right-cloud-animation-duration
+                    );
                 }
 
                 &.front-bottom-right {
@@ -210,21 +221,23 @@ tCSkyStyle.replaceSync(css`
                     bottom: -8.2%;
                     right: calc(-3.5 * var(--unit));
                     mask-image: url('assets/illustration/cloud-front-bottom-right.svg');
-                    animation-duration: 40s;
+                    animation-duration: var(
+                        --front-bottom-right-cloud-animation-duration
+                    );
                 }
             }
 
             .animation-toggle {
                 position: absolute;
                 left: 0;
-                bottom: 0;
+                top: 0;
                 padding: 0.2rem 0.7rem;
                 margin: 1rem;
                 background-color: var(--background);
                 border: none;
                 border-radius: 5rem;
                 opacity: 0.8;
-                transition: var(--short-animation) ease;
+                transition: var(--short-animation-duration) ease;
                 transition-property: opacity, background-color, translate;
 
                 &:hover,

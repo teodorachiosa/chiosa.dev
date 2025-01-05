@@ -2,6 +2,7 @@ const html = String.raw;
 
 export const tCHomeTemplate = html`
     <div class="avatar-and-text-wrapper">
+        <h2 class="sr-only">About me</h2>
         <div class="avatar">
             <img
                 src="assets/avatar.webp"
@@ -13,7 +14,7 @@ export const tCHomeTemplate = html`
             ></div>
         </div>
         <div class="intro-text">
-            <p>Hi!</p>
+            <p>Hey<span aria-hidden="true">!</span> 👋</p>
             <p>
                 I’m <span class="my-name">Teodora</span>, a frontend developer
                 and <span class="my-passion">accessibility enthusiast</span>.

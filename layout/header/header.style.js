@@ -46,7 +46,7 @@ tCHeaderStyle.replaceSync(css`
                 }
 
                 svg * {
-                    transition: ease var(--medium-animation);
+                    transition: ease var(--medium-animation-duration);
                     transition-property: fill, stroke;
                 }
             }

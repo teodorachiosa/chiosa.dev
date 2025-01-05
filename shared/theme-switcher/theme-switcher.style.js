@@ -16,12 +16,12 @@ tCThemeSwitcherStyle.replaceSync(css`
         background-color: transparent;
         color: var(--body);
         font-size: 0.9rem;
-        transition: all var(--short-animation) ease;
+        transition: all var(--short-animation-duration) ease;
 
         .icon {
             display: flex;
             height: 100%;
-            transition: all var(--short-animation) ease;
+            transition: all var(--short-animation-duration) ease;
 
             svg {
                 stroke: currentColor;

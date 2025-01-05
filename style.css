@@ -18,13 +18,22 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    transition: ease var(--short-animation);
+    transition: ease var(--short-animation-duration);
     transition-property: color, background-color;
 }
 
 @media (width < 600px) {
     tc-sky {
         display: none;
+        --short-animation-duration: 0;
+        --medium-animation-duration: 0;
+        --light-source-glow-animation: 0;
+        --top-left-cloud-animation-duration: 0;
+        --bottom-left-cloud-animation-duration: 0;
+        --top-right-cloud-animation-duration: 0;
+        --bottom-right-cloud-animation-duration: 0;
+        --blended-bottom-right-cloud-animation-duration: 0;
+        --front-bottom-right-cloud-animation-duration: 0;
     }
 }
 

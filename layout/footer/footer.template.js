@@ -12,9 +12,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Linkedin</span>
-                        <span class="visually-hidden"
-                            >(opens in a new tab)</span
-                        >
+                        <span class="sr-only">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -27,9 +25,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Bluesky</span>
-                        <span class="visually-hidden"
-                            >(opens in a new tab)</span
-                        >
+                        <span class="sr-only">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -42,9 +38,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Codepen</span>
-                        <span class="visually-hidden"
-                            >(opens in a new tab)</span
-                        >
+                        <span class="sr-only">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -57,9 +51,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Cara</span>
-                        <span class="visually-hidden"
-                            >(opens in a new tab)</span
-                        >
+                        <span class="sr-only">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -68,9 +60,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text"
                         ><span>Email</span>
-                        <span class="visually-hidden"
-                            >(Opens email client)</span
-                        ></span
+                        <span class="sr-only">(Opens email client)</span></span
                     ></a
                 >
             </li>
