@@ -233,7 +233,7 @@ tCSkyStyle.replaceSync(css`
                 top: 0;
                 padding: 0.2rem 0.7rem;
                 margin: 1rem;
-font-size: 1.2rem;
+                font-size: 1rem;
                 background-color: var(--background);
                 border: none;
                 border-radius: 5rem;
