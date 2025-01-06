@@ -174,7 +174,7 @@ tCSkyStyle.replaceSync(css`
                 &.bottom-left {
                     width: calc(27.2 * var(--unit));
                     aspect-ratio: 271 / 286;
-                    top: 55%;
+                    top: 56.8%;
                     left: calc(-4 * var(--unit));
                     mask-image: url('assets/illustration/cloud-bottom-left.svg');
                     animation-duration: var(
@@ -207,7 +207,7 @@ tCSkyStyle.replaceSync(css`
                 &.blended-bottom-right {
                     width: calc(38.5 * var(--unit));
                     aspect-ratio: 428 / 385;
-                    bottom: -7.8%;
+                    bottom: -8%;
                     right: calc(-1 * var(--unit));
                     mask-image: url('assets/illustration/cloud-blended-bottom-right.svg');
                     animation-duration: var(
