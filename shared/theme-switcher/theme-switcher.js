@@ -66,8 +66,6 @@ export class TCThemeSwitcher extends HTMLElement {
             case 'light':
                 this.themeSwitcherButton.querySelector('.text').innerHTML =
                     'Lights off';
-                this.themeSwitcherButton.querySelector('.label').innerHTML =
-                    'Activate dark mode';
                 if (this.hasThemeButtonInteraction) {
                     this.shadowRoot.querySelector('.status').innerHTML =
                         'Light mode activated';
@@ -76,8 +74,6 @@ export class TCThemeSwitcher extends HTMLElement {
             case 'dark':
                 this.themeSwitcherButton.querySelector('.text').innerHTML =
                     'Lights on';
-                this.themeSwitcherButton.querySelector('.label').innerHTML =
-                    'Activate light mode';
                 if (this.hasThemeButtonInteraction) {
                     this.shadowRoot.querySelector('.status').innerHTML =
                         'Dark mode activated';
@@ -88,11 +84,6 @@ export class TCThemeSwitcher extends HTMLElement {
                     this.getPrefersDarkMedia().matches
                         ? 'Lights on'
                         : 'Lights off';
-                this.themeSwitcherButton.querySelector(
-                    '.label'
-                ).innerHTML = `Activate ${
-                    this.getPrefersDarkMedia().matches ? 'light' : 'dark'
-                } mode`;
                 if (this.hasThemeButtonInteraction) {
                     this.shadowRoot.querySelector('.status').innerHTML = `${
                         this.getPrefersDarkMedia().matches ? 'Dark' : 'Light'
