@@ -42,15 +42,15 @@ export class TCThemeSwitcher extends HTMLElement {
         let svgPath;
         switch (this.currentTheme) {
             case 'light':
-                svgPath = 'assets/sun.svg';
+                svgPath = 'assets/moon.svg';
                 break;
             case 'dark':
-                svgPath = 'assets/moon.svg';
+                svgPath = 'assets/sun.svg';
                 break;
             default:
                 svgPath = this.getPrefersDarkMedia().matches
-                    ? 'assets/moon.svg'
-                    : 'assets/sun.svg';
+                    ? 'assets/sun.svg'
+                    : 'assets/moon.svg';
         }
 
         fetchSVG(svgPath, (svgContent) => {
@@ -65,7 +65,7 @@ export class TCThemeSwitcher extends HTMLElement {
         switch (this.currentTheme) {
             case 'light':
                 this.themeSwitcherButton.querySelector('.text').innerHTML =
-                    'Light';
+                    'Lights off';
                 this.themeSwitcherButton.querySelector('.label').innerHTML =
                     'Activate dark mode';
                 if (this.hasThemeButtonInteraction) {
@@ -75,7 +75,7 @@ export class TCThemeSwitcher extends HTMLElement {
                 break;
             case 'dark':
                 this.themeSwitcherButton.querySelector('.text').innerHTML =
-                    'Dark';
+                    'Lights on';
                 this.themeSwitcherButton.querySelector('.label').innerHTML =
                     'Activate light mode';
                 if (this.hasThemeButtonInteraction) {
@@ -85,7 +85,9 @@ export class TCThemeSwitcher extends HTMLElement {
                 break;
             default:
                 this.themeSwitcherButton.querySelector('.text').innerHTML =
-                    this.getPrefersDarkMedia().matches ? 'Dark' : 'Light';
+                    this.getPrefersDarkMedia().matches
+                        ? 'Lights on'
+                        : 'Lights off';
                 this.themeSwitcherButton.querySelector(
                     '.label'
                 ).innerHTML = `Activate ${
