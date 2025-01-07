@@ -10,39 +10,35 @@ tCHeaderStyle.replaceSync(css`
             justify-content: space-between;
 
             .logo {
-                --top-offset: 18%;
-                --left-offset: 8%;
-
                 position: relative;
-                margin-top: -1.6rem;
-                margin-left: -1.6rem;
+                --offset: -0.4rem;
 
                 &::before {
                     content: '';
                     z-index: -1;
                     position: absolute;
-                    top: var(--top-offset);
-                    left: var(--left-offset);
+                    top: var(--offset);
+                    left: var(--offset);
                     height: 60%;
                     aspect-ratio: 1/1;
                     background: var(--sky-gradient-color-light);
                     border-radius: 50%;
                     filter: blur(0.5rem);
-                    opacity: 0.05;
+                    opacity: 0.15;
                 }
 
                 &::after {
                     content: '';
                     z-index: -1;
                     position: absolute;
-                    top: var(--top-offset);
-                    left: var(--left-offset);
+                    top: var(--offset);
+                    left: var(--offset);
                     height: 60%;
                     aspect-ratio: 1/1;
                     background: var(--sky-gradient-color-light);
                     border-radius: 50%;
                     filter: blur(2rem);
-                    opacity: 0.3;
+                    opacity: 0.6;
                 }
 
                 svg * {
