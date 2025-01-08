@@ -1,13 +1,15 @@
 {
     "name": "@chiosa/dev",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "main": "app.js",
     "files": [
         "assets/fonts",
         "assets/logo.svg",
         "assets/moon.svg",
         "assets/sun.svg",
+        "assets/thumbnail.webp",
         "layout/*",
+        "pages/*",
         "shared/*",
         "styles/*",
         "404.html",
