@@ -5,7 +5,7 @@
 let sharedStyle;
 
 async function loadSharedStyles() {
-    const response = await fetch('styles/shared.css', { mode: 'no-cors' });
+    const response = await fetch('css/shared.css', { mode: 'no-cors' });
     const cssText = await response.text();
     sharedStyle = new CSSStyleSheet();
     sharedStyle.replaceSync(cssText);

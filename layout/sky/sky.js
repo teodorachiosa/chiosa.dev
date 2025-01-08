@@ -20,6 +20,7 @@ export class TCSky extends HTMLElement {
         this.animationToggleButton =
             this.shadowRoot.querySelector('.animation-toggle');
         this.skyContainer = this.shadowRoot.querySelector('.sky-container');
+        this.skyContainer.classList.add(this.animationDisabledClassName);
         this.updateToggleAnimationButton();
         this.attachClickEvent();
     }
