@@ -47,7 +47,7 @@
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
-    --d-body: #fff;
+    --d-body: #f7e4ff;
     --d-background: #141123;
     --d-sky-gradient-position: center top;
     --d-gradient-color-dark: #141123;
