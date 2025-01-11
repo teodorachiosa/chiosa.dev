@@ -3,7 +3,7 @@
 
     /* LIGHT MODE */
     --l-shadow: color-mix(in hsl, var(--background), #000 20%);
-    --l-body: #141123;
+    --l-body: #111923;
     --l-background: #f2e4ff;
     --l-sky-gradient-position: center bottom;
     --l-gradient-color-dark: #6954c5;
