@@ -5,6 +5,8 @@
     --l-shadow: color-mix(in hsl, var(--background), #000 20%);
     --l-body: #111923;
     --l-background: #f2e4ff;
+    --l-link-color: #5a37b9;
+    --l-strong-color: #ac0f65;
     --l-sky-gradient-position: center bottom;
     --l-gradient-color-dark: #6954c5;
     --l-gradient-color-medium: #d184ae;
@@ -49,6 +51,8 @@
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
     --d-body: #f7e4ff;
     --d-background: #141123;
+    --d-link-color: #937dcf;
+    --d-strong-color: #e29fc4;
     --d-sky-gradient-position: center top;
     --d-gradient-color-dark: #141123;
     --d-gradient-color-medium: #4f4d86;
@@ -93,6 +97,8 @@
     --shadow: light-dark(var(--l-shadow), var(--d-shadow));
     --body: light-dark(var(--l-body), var(--d-body));
     --background: light-dark(var(--l-background), var(--d-background));
+    --link-color: light-dark(var(--l-link-color), var(--d-link-color));
+    --strong-color: light-dark(var(--l-strong-color), var(--d-strong-color));
     --sky-gradient-color-dark: light-dark(
         var(--l-gradient-color-dark),
         var(--d-gradient-color-dark)

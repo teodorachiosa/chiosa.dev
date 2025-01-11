@@ -19,6 +19,9 @@ export const tCHomeTemplate = html`
                 I’m <span class="my-name">Teodora</span>, a frontend developer
                 and <span class="my-passion">accessibility enthusiast</span>.
             </p>
+            <p class="blog-shoutout">
+                Check out my <a href="https://blog.chiosa.dev">blog</a>!
+            </p>
         </div>
     </div>
 `;

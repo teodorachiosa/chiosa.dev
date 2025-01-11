@@ -50,6 +50,24 @@ button {
     background-image: var(--background-image);
 }
 
+a {
+    display: inline-block;
+    color: var(--link-color) !important;
+    transition: var(--short-animation-duration) ease-in-out;
+    text-decoration: underline 0.1rem
+        color-mix(in hsl, var(--background), var(--body) 20%);
+    text-underline-offset: 0.2rem;
+    font-weight: 400;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--link-color);
+        text-decoration-color: var(--link-color);
+        text-underline-offset: 0.4rem;
+        translate: 0 -0.08rem;
+    }
+}
+
 @media (prefers-reduced-motion) {
     *,
     ::before,

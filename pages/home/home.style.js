@@ -52,6 +52,15 @@ tCHomeStyle.replaceSync(css`
                         font-weight: 400;
                     }
                 }
+
+                .blog-shoutout {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+
+                    a {
+                        font-weight: 400;
+                    }
+                }
             }
         }
 
