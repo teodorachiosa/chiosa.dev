@@ -1,6 +1,6 @@
 {
     "name": "@chiosa/dev",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "main": "app.js",
     "files": [
         "assets/fonts",
@@ -10,6 +10,7 @@
         "assets/thumbnail.webp",
         "css/*",
         "404.html",
-        "favicon.ico"
+        "favicon.ico",
+        "shared/theme-switcher/set-initial-theme-from-cookie.js"
     ]
 }
