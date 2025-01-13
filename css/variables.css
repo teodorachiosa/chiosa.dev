@@ -49,7 +49,7 @@
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
-    --d-body: #f7e4ff;
+    --d-body: #dec9e7;
     --d-background: #141123;
     --d-link-color: #937dcf;
     --d-strong-color: #e29fc4;
