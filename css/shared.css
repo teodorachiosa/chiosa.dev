@@ -35,6 +35,7 @@ button {
 :focus-visible {
     outline: auto;
     outline-offset: 2px;
+    outline-color: black;
 }
 
 .main-gradient-background {
