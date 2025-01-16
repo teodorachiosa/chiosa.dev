@@ -22,11 +22,7 @@ tCFooterStyle.replaceSync(css`
                     align-items: center;
                     justify-content: center;
                     padding: 0.5rem;
-                    color: var(--body);
                     font-size: 1.1rem;
-                    transition: var(--short-animation-duration) ease-in-out;
-                    text-decoration: underline 0.2rem transparent;
-                    text-underline-offset: 0.8rem;
 
                     .icon {
                         display: flex;
@@ -43,12 +39,6 @@ tCFooterStyle.replaceSync(css`
 
                     &:hover,
                     &:focus-visible {
-                        text-decoration-color: color-mix(
-                            in hsl,
-                            var(--background),
-                            var(--body) 45%
-                        );
-                        text-underline-offset: 0.4rem;
                         translate: -0.1rem -0.1rem;
                     }
                 }

@@ -3,9 +3,9 @@
 
     /* LIGHT MODE */
     --l-shadow: color-mix(in hsl, var(--background), #000 20%);
-    --l-body: #111923;
-    --l-background: #f2e4ff;
-    --l-link-color: #5a37b9;
+    --l-link-color: #6b48cb;
+    --l-body: #0d131c;
+    --l-background: #f5ebff;
     --l-strong-color: #ac0f65;
     --l-sky-gradient-position: center bottom;
     --l-gradient-color-dark: #6954c5;
@@ -49,9 +49,9 @@
 
     /* DARK MODE */
     --d-shadow: color-mix(in hsl, var(--background), #fff 10%);
-    --d-body: #f7e4ff;
-    --d-background: #141123;
     --d-link-color: #937dcf;
+    --d-body: #f1eef7;
+    --d-background: #141123;
     --d-strong-color: #e29fc4;
     --d-sky-gradient-position: center top;
     --d-gradient-color-dark: #141123;
