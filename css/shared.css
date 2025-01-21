@@ -52,7 +52,6 @@ button {
 }
 
 a {
-    display: inline-block;
     color: var(--link-color) !important;
     transition: var(--short-animation-duration) ease-in-out;
     text-decoration: underline 0.1rem
