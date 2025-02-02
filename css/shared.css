@@ -63,7 +63,7 @@ a {
     &:focus-visible {
         color: var(--link-color);
         text-decoration-color: var(--link-color);
-        text-underline-offset: 0.4rem;
+        text-underline-offset: 0.3rem;
         translate: 0 -0.08rem;
     }
 }
