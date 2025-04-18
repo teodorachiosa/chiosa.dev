@@ -2,6 +2,7 @@ const html = String.raw;
 
 export const tCFooterTemplate = html`
     <footer>
+        <h2 class="sr-only">Socials</h2>
         <ul aria-label="Socials">
             <li>
                 <a

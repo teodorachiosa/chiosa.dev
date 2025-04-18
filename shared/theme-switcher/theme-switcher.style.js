@@ -11,7 +11,7 @@ tCThemeSwitcherStyle.replaceSync(css`
         padding: 0.6rem 0.7rem;
         height: var(--size);
         border: 0.2rem solid
-            color-mix(in hsl, var(--background), var(--body) 35%);
+            color-mix(in hsl, var(--background), var(--body) 47%);
         border-radius: 0.7rem;
         background-color: transparent;
         color: var(--body);
