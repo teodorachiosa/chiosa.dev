@@ -20,7 +20,7 @@ export const tCHomeTemplate = html`
                 and <span class="my-passion">accessibility enthusiast</span>.
             </p>
             <p class="blog-shoutout">
-                Check out my <a href="https://blog.chiosa.dev">blog</a>!
+                Check out <a href="https://blog.chiosa.dev">my blog</a>!
             </p>
         </div>
     </div>
