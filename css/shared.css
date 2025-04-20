@@ -34,7 +34,7 @@ button {
 
 :focus-visible {
     outline: auto;
-    outline-offset: 2px;
+    outline-offset: 4px;
     outline-color: black;
 }
 
