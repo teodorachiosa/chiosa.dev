@@ -2,6 +2,30 @@ const html = String.raw;
 
 export const tCSkyTemplate = html`
     <div class="sky-container main-gradient-background background-image">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+
         <div class="light-source">
             <div class="light-source-disc background-image"></div>
             <div class="light-source-glow"></div>

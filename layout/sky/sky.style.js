@@ -24,6 +24,178 @@ tCSkyStyle.replaceSync(css`
                 }
             }
 
+            .star {
+                position: absolute;
+                width: 0.2rem;
+                aspect-ratio: 1 / 1;
+                background-color: light-dark(transparent, var(--body));
+                border-radius: 50%;
+                box-shadow: 0 0 0.2rem
+                    light-dark(
+                        transparent,
+                        color-mix(in hsl, var(--body), transparent 70%)
+                    );
+                opacity: 0.9;
+                animation: breathe infinite
+                    calc(var(--medium-animation-duration) * 3) ease-in-out;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                    width: 0.1rem;
+                    height: 0.8rem;
+                    background-color: light-dark(transparent, var(--body));
+                    opacity: 0.1;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    translate: -50% -50%;
+                    width: 0.8rem;
+                    height: 0.1rem;
+                    background-color: light-dark(transparent, var(--body));
+                    opacity: 0.1;
+                }
+
+                &:nth-child(1) {
+                    left: 50%;
+                    top: 40%;
+                }
+
+                &:nth-child(2) {
+                    left: 70%;
+                    top: 20%;
+                    animation-delay: -2s;
+                }
+
+                &:nth-child(3) {
+                    left: 80%;
+                    top: 60%;
+                    animation-delay: -4s;
+                }
+
+                &:nth-child(4) {
+                    left: 80%;
+                    top: 5%;
+                    animation-delay: -6s;
+                }
+
+                &:nth-child(5) {
+                    left: 20%;
+                    top: 10%;
+                    animation-delay: -8s;
+                }
+
+                &:nth-child(6) {
+                    left: 10%;
+                    top: 30%;
+                    opacity: 0.3;
+                    animation-delay: -4s;
+                }
+
+                &:nth-child(7) {
+                    left: 30%;
+                    top: 70%;
+                    opacity: 0.3;
+                }
+
+                &:nth-child(8) {
+                    left: 50%;
+                    top: 12%;
+                    opacity: 0.3;
+                    animation-delay: -2s;
+                }
+
+                &:nth-child(9) {
+                    left: 60%;
+                    top: 90%;
+                    opacity: 0.3;
+                    animation-delay: -2s;
+                }
+
+                &:nth-child(10) {
+                    left: 90%;
+                    top: 50%;
+                    opacity: 0.3;
+                    animation-delay: -5s;
+                }
+
+                &:nth-child(11) {
+                    left: 20%;
+                    top: 50%;
+                    opacity: 0.3;
+                }
+
+                &:nth-child(12) {
+                    left: 10%;
+                    top: 30%;
+                    opacity: 0.3;
+                    animation-delay: -4s;
+                }
+
+                &:nth-child(13) {
+                    left: 40%;
+                    top: 5%;
+                    opacity: 0.3;
+                    animation-delay: -2s;
+                }
+
+                &:nth-child(14) {
+                    left: 70%;
+                    top: 10%;
+                    opacity: 0.3;
+                    animation-delay: -6s;
+                }
+
+                &:nth-child(15) {
+                    left: 90%;
+                    top: 30%;
+                    opacity: 0.3;
+                    animation-delay: -5s;
+                }
+
+                &:nth-child(16) {
+                    left: 30%;
+                    top: 25%;
+                    opacity: 0.3;
+                    animation-delay: -4s;
+                }
+
+                &:nth-child(17) {
+                    left: 70%;
+                    top: 35%;
+                    opacity: 0.3;
+                    animation-delay: -2s;
+                }
+
+                &:nth-child(18) {
+                    left: 10%;
+                    top: 45%;
+                    opacity: 0.3;
+                    animation-delay: -6s;
+                }
+
+                &:nth-child(19) {
+                    left: 60%;
+                    top: 55%;
+                    opacity: 0.3;
+                    animation-delay: -4s;
+                }
+
+                &:nth-child(20) {
+                    left: 30%;
+                    top: 90%;
+                    opacity: 0.3;
+                    animation-delay: -2s;
+                }
+            }
+
             .light-source {
                 position: absolute;
                 top: 58%;
