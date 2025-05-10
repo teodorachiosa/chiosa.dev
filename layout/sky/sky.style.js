@@ -398,35 +398,35 @@ tCSkyStyle.replaceSync(css`
                     );
                 }
             }
+        }
 
-            .animation-toggle {
-                position: absolute;
-                left: 0;
-                top: 0;
-                padding: 0.2rem 0.7rem;
-                margin: 1rem;
-                font-size: 1rem;
-                background-color: var(--background);
-                border: none;
-                border-radius: 5rem;
-                opacity: 0.8;
-                transition: var(--short-animation-duration) ease;
-                transition-property: opacity, background-color, translate;
+        .animation-toggle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0.2rem 0.7rem;
+            margin: 1rem;
+            font-size: 1rem;
+            background-color: var(--background);
+            border: none;
+            border-radius: 5rem;
+            opacity: 0.8;
+            transition: var(--short-animation-duration) ease;
+            transition-property: opacity, background-color, translate;
 
-                &:hover,
-                &:focus-visible {
-                    opacity: 1;
-                    translate: -0.1rem -0.1rem;
-                }
+            &:hover,
+            &:focus-visible {
+                opacity: 1;
+                translate: -0.1rem -0.1rem;
+            }
 
-                &:active {
-                    translate: 0 0;
-                    background-color: color-mix(
-                        in hsl,
-                        var(--background),
-                        var(--body) 15%
-                    );
-                }
+            &:active {
+                translate: 0 0;
+                background-color: color-mix(
+                    in hsl,
+                    var(--background),
+                    var(--body) 15%
+                );
             }
         }
     }

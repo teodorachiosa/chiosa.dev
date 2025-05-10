@@ -1,7 +1,11 @@
 const html = String.raw;
 
 export const tCSkyTemplate = html`
-    <div class="sky-container main-gradient-background background-image">
+    <div
+        role="image"
+        aria-labelledby="illustration-description"
+        class="sky-container main-gradient-background background-image"
+    >
         <div class="star"></div>
         <div class="star"></div>
         <div class="star"></div>
@@ -49,9 +53,11 @@ export const tCSkyTemplate = html`
         <div
             class="cloud front-bottom-right front-bottom-right-cloud-gradient background-image"
         ></div>
-
-        <div class="controls">
-            <button class="animation-toggle"></button>
-        </div>
     </div>
+    <div class="controls">
+        <button class="animation-toggle"></button>
+    </div>
+    <span id="illustration-description" class="sr-only" aria-hidden="true"
+        >clouds moving slowly through the sky</span
+    >
 `;
