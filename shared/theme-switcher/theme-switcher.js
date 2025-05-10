@@ -90,6 +90,10 @@ export class TCThemeSwitcher extends HTMLElement {
                     } mode activated`;
                 }
         }
+
+        setTimeout(() => {
+            this.shadowRoot.querySelector('.status').innerHTML = '';
+        }, 350);
     }
 
     attachClickEvent() {
