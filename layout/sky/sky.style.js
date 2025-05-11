@@ -248,7 +248,7 @@ tCSkyStyle.replaceSync(css`
                 transition-duration: var(--medium-animation-duration);
                 transition-timing-function: ease;
                 animation: move infinite linear;
-                animation-delay: -10s;
+                animation-delay: -16s;
 
                 &.top-left-cloud-gradient {
                     --background-image: linear-gradient(
