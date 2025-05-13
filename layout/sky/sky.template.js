@@ -2,6 +2,9 @@ const html = String.raw;
 
 export const tCSkyTemplate = html`
     <aside aria-label="sky illustration">
+        <a class="sr-only skip-to-main-content" href="#main-parent"
+            >Skip to main content</a
+        >
         <div
             role="image"
             aria-labelledby="illustration-description"
