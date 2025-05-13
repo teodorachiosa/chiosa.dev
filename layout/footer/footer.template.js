@@ -6,6 +6,19 @@ export const tCFooterTemplate = html`
         <ul aria-label="Socials">
             <li>
                 <a
+                    class="link blog"
+                    href="https://blog.chiosa.dev"
+                    target="_blank"
+                >
+                    <span class="icon"></span>
+                    <span class="text">
+                        <span>Blog</span>
+                        <span class="sr-only">(opens in a new tab)</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a
                     class="link linkedin"
                     href="https://www.linkedin.com/in/teodora-chiosa"
                     target="_blank"

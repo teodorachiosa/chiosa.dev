@@ -78,6 +78,9 @@ a {
 }
 
 .skip-to-main-content {
+    letter-spacing: 0;
+    font-size: 1rem;
+
     &:focus-visible {
         top: 1rem;
         left: 1rem;
@@ -91,6 +94,5 @@ a {
         clip: unset;
         background-color: var(--background);
         z-index: 2;
-        font-size: 1rem;
     }
 }

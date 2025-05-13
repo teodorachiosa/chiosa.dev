@@ -25,6 +25,7 @@ export class TCFooter extends HTMLElement {
 
     getSVGIcons() {
         const svgPaths = [
+            'assets/blog.svg',
             'assets/linkedin.svg',
             'assets/bsky.svg',
             'assets/codepen.svg',
