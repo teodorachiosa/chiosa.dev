@@ -76,3 +76,21 @@ a {
         animation-duration: 0s !important;
     }
 }
+
+.skip-to-main-content {
+    &:focus-visible {
+        top: 1rem;
+        left: 1rem;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0.3rem 0.5rem;
+        outline: auto;
+        outline-offset: 2px;
+        outline-color: black;
+        clip: unset;
+        background-color: var(--background);
+        z-index: 2;
+        font-size: 1rem;
+    }
+}
