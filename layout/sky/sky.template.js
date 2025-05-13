@@ -1,63 +1,65 @@
 const html = String.raw;
 
 export const tCSkyTemplate = html`
-    <div
-        role="image"
-        aria-labelledby="illustration-description"
-        class="sky-container main-gradient-background background-image"
-    >
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+    <aside aria-label="sky illustration">
+        <div
+            role="image"
+            aria-labelledby="illustration-description"
+            class="sky-container main-gradient-background background-image"
+        >
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
 
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
 
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
 
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
 
-        <div class="light-source">
-            <div class="light-source-disc background-image"></div>
-            <div class="light-source-glow"></div>
-            <div class="light-source-glow outer"></div>
+            <div class="light-source">
+                <div class="light-source-disc background-image"></div>
+                <div class="light-source-glow"></div>
+                <div class="light-source-glow outer"></div>
+            </div>
+            <div
+                class="cloud blended-bottom-right blended-bottom-right-cloud-gradient background-image"
+            ></div>
+            <div
+                class="cloud top-left top-left-cloud-gradient background-image"
+            ></div>
+            <div
+                class="cloud top-right top-right-cloud-gradient background-image"
+            ></div>
+            <div
+                class="cloud bottom-left bottom-left-cloud-gradient background-image"
+            ></div>
+            <div
+                class="cloud bottom-right bottom-right-cloud-gradient background-image"
+            ></div>
+            <div
+                class="cloud front-bottom-right front-bottom-right-cloud-gradient background-image"
+            ></div>
         </div>
-        <div
-            class="cloud blended-bottom-right blended-bottom-right-cloud-gradient background-image"
-        ></div>
-        <div
-            class="cloud top-left top-left-cloud-gradient background-image"
-        ></div>
-        <div
-            class="cloud top-right top-right-cloud-gradient background-image"
-        ></div>
-        <div
-            class="cloud bottom-left bottom-left-cloud-gradient background-image"
-        ></div>
-        <div
-            class="cloud bottom-right bottom-right-cloud-gradient background-image"
-        ></div>
-        <div
-            class="cloud front-bottom-right front-bottom-right-cloud-gradient background-image"
-        ></div>
-    </div>
-    <div class="controls">
-        <button class="animation-toggle"></button>
-    </div>
-    <span id="illustration-description" class="sr-only" aria-hidden="true"
-        >clouds moving slowly through the sky</span
-    >
+        <div class="controls">
+            <button class="animation-toggle"></button>
+        </div>
+        <span id="illustration-description" class="sr-only" aria-hidden="true"
+            >Animated illustration of a cloudy sky</span
+        >
+    </aside>
 `;

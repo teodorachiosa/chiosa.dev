@@ -62,37 +62,53 @@ export class TCThemeSwitcher extends HTMLElement {
     }
 
     updateButtonProperties() {
+        let tcSkyElement = document.querySelector('tc-sky');
+        let illustrationDescriptionElement = tcSkyElement.shadowRoot.querySelector(
+            '#illustration-description'
+        );
+
+        const originalDescription =
+            'Animated illustration of a cloudy sky';
+        const darkModeDescription = `${originalDescription} featuring shades of blue, indigo and purple. The moon is shining and the stars are twinkling.`;
+        const lightModeDescription = `${originalDescription} featuring the colors of the sunset: orange, pink and blue.`;
+
         switch (this.currentTheme) {
             case 'light':
-                this.themeSwitcherButton.querySelector('.text').innerHTML =
-                    'Lights off';
+                this.themeSwitcherButton.querySelector('.text').innerText =
+                    'Dark mode';
                 if (this.hasThemeButtonInteraction) {
-                    this.shadowRoot.querySelector('.status').innerHTML =
+                    this.shadowRoot.querySelector('.status').innerText =
                         'Light mode activated';
                 }
+                illustrationDescriptionElement.innerText = lightModeDescription;
                 break;
             case 'dark':
-                this.themeSwitcherButton.querySelector('.text').innerHTML =
-                    'Lights on';
+                this.themeSwitcherButton.querySelector('.text').innerText =
+                    'Light mode';
                 if (this.hasThemeButtonInteraction) {
-                    this.shadowRoot.querySelector('.status').innerHTML =
+                    this.shadowRoot.querySelector('.status').innerText =
                         'Dark mode activated';
                 }
+                illustrationDescriptionElement.innerText = darkModeDescription;
                 break;
             default:
-                this.themeSwitcherButton.querySelector('.text').innerHTML =
+                this.themeSwitcherButton.querySelector('.text').innerText =
                     this.getPrefersDarkMedia().matches
-                        ? 'Lights on'
-                        : 'Lights off';
+                        ? 'Light mode'
+                        : 'Dark mode';
                 if (this.hasThemeButtonInteraction) {
-                    this.shadowRoot.querySelector('.status').innerHTML = `${
+                    this.shadowRoot.querySelector('.status').innerText = `${
                         this.getPrefersDarkMedia().matches ? 'Dark' : 'Light'
                     } mode activated`;
                 }
+                illustrationDescriptionElement.innerText =
+                    this.getPrefersDarkMedia().matches
+                        ? lightModeDescription
+                        : darkModeDescription;
         }
 
         setTimeout(() => {
-            this.shadowRoot.querySelector('.status').innerHTML = '';
+            this.shadowRoot.querySelector('.status').innerText = '';
         }, 350);
     }
 

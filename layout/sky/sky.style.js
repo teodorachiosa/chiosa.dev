@@ -8,6 +8,12 @@ tCSkyStyle.replaceSync(css`
         width: 30%;
         height: 100%;
 
+        aside {
+            display: block;
+            flex-shrink: 0;
+            height: 100%;
+        }
+
         .sky-container {
             position: relative;
             overflow: hidden;
