@@ -2,7 +2,7 @@ const html = String.raw;
 
 export const tCFooterTemplate = html`
     <footer>
-        <h2 class="sr-only">Socials</h2>
+        <h2 class="visually-hidden">Socials</h2>
         <ul aria-label="Socials">
             <li>
                 <a
@@ -13,7 +13,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Blog</span>
-                        <span class="sr-only">(opens in a new tab)</span>
+                        <span class="visually-hidden">(opens in a new tab)</span>
                     </span>
                 </a>
             </li>
@@ -26,7 +26,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Linkedin</span>
-                        <span class="sr-only">(opens in a new tab)</span>
+                        <span class="visually-hidden">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -39,7 +39,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Bluesky</span>
-                        <span class="sr-only">(opens in a new tab)</span>
+                        <span class="visually-hidden">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -52,7 +52,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Codepen</span>
-                        <span class="sr-only">(opens in a new tab)</span>
+                        <span class="visually-hidden">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -65,7 +65,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text">
                         <span>Cara</span>
-                        <span class="sr-only">(opens in a new tab)</span>
+                        <span class="visually-hidden">(opens in a new tab)</span>
                     </span></a
                 >
             </li>
@@ -74,7 +74,7 @@ export const tCFooterTemplate = html`
                     <span class="icon"></span>
                     <span class="text"
                         ><span>Email</span>
-                        <span class="sr-only">(Opens email client)</span></span
+                        <span class="visually-hidden">(Opens email client)</span></span
                     ></a
                 >
             </li>

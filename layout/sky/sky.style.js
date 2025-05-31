@@ -239,7 +239,7 @@ tCSkyStyle.replaceSync(css`
                     opacity: 0.1;
                     pointer-events: none;
                     animation: breathe infinite
-                        var(--light-source-glow-animation) ease-in-out;
+                        var(--light-source-glow-animation-duration) ease-in-out;
 
                     &.outer {
                         animation-delay: -3s;
@@ -414,7 +414,7 @@ tCSkyStyle.replaceSync(css`
             margin: 1rem;
             font-size: 1rem;
             background-color: var(--background);
-            border: none;
+            border: 0.2rem solid color-mix(in hsl, var(--background), var(--body) 47%);
             border-radius: 5rem;
             opacity: 0.8;
             transition: var(--short-animation-duration) ease;

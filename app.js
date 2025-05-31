@@ -1,6 +1,6 @@
 /* Resources:
  https://www.youtube.com/watch?v=PFpUCnyztJk 
- https://gist.github.com/praveenpuglia/0832da687ed5a5d7a0907046c9ef1813 */
+ https://github.com/praveenpuglia/shadow-dom-in-depth */
 
 let sharedStyle;
 

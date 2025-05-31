@@ -1,11 +1,10 @@
-.sr-only {
+.visually-hidden {
     position: absolute;
     left: 0;
     width: 0.01rem;
     height: 0.01rem;
     border: 0;
     padding: 0;
-    margin: -0.01rem;
     clip: rect(0 0 0 0);
     overflow: hidden;
     white-space: nowrap;
@@ -23,9 +22,7 @@ svg {
 }
 
 button {
-    font-family: 'Lexend', 'Verdana', sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-family: inherit;
 }
 
 :focus:not(:focus-visible) {
@@ -36,6 +33,23 @@ button {
     outline: auto;
     outline-offset: 4px;
     outline-color: black;
+}
+
+.skip-link:focus-visible {
+    width: auto;
+    height: auto;
+    clip: unset;
+    z-index: 2;
+    padding: 0.3rem 0.5rem;
+    background-color: var(--background);
+}
+
+.skip-to-main-content {
+    letter-spacing: 0;
+    font-size: 1rem;
+    top: 1rem;
+    left: 1rem;
+    margin: 0;
 }
 
 .main-gradient-background {
@@ -74,25 +88,5 @@ a {
     ::after {
         transition-duration: 0s !important;
         animation-duration: 0s !important;
-    }
-}
-
-.skip-to-main-content {
-    letter-spacing: 0;
-    font-size: 1rem;
-
-    &:focus-visible {
-        top: 1rem;
-        left: 1rem;
-        width: auto;
-        height: auto;
-        margin: 0;
-        padding: 0.3rem 0.5rem;
-        outline: auto;
-        outline-offset: 2px;
-        outline-color: black;
-        clip: unset;
-        background-color: var(--background);
-        z-index: 2;
     }
 }

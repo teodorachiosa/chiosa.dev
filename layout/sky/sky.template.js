@@ -2,7 +2,7 @@ const html = String.raw;
 
 export const tCSkyTemplate = html`
     <aside aria-label="sky illustration">
-        <a class="sr-only skip-to-main-content" href="#main-parent"
+        <a class="skip-link skip-to-main-content visually-hidden" href="#main-parent"
             >Skip to main content</a
         >
         <div
@@ -61,7 +61,7 @@ export const tCSkyTemplate = html`
         <div class="controls">
             <button class="animation-toggle"></button>
         </div>
-        <span id="illustration-description" class="sr-only" aria-hidden="true"
+        <span id="illustration-description" class="visually-hidden" aria-hidden="true"
             >Animated illustration of a cloudy sky</span
         >
     </aside>

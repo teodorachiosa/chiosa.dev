@@ -3,5 +3,5 @@ export const tCThemeSwitcherTemplate = /* HTML */ `
         <span class="icon"></span>
         <span class="text"></span>
     </button>
-    <span aria-live="polite" class="sr-only status"></span>
+    <span aria-live="polite" class="visually-hidden status"></span>
 `;

@@ -3,11 +3,10 @@
 
     /* LIGHT MODE */
     --l-shadow: color-mix(in hsl, var(--background), #000 20%);
-    --l-link-color: #6b48cb;
+    --l-link-color: #6B4AC4;
     --l-body: #0d131c;
     --l-background: #f5ebff;
     --l-strong-color: #ac0f65;
-    --l-sky-gradient-position: center bottom;
     --l-gradient-color-dark: #6954c5;
     --l-gradient-color-medium: #d184ae;
     --l-gradient-color-light: #f3ba94;
@@ -53,7 +52,6 @@
     --d-body: #f1eef7;
     --d-background: #141123;
     --d-strong-color: #e29fc4;
-    --d-sky-gradient-position: center top;
     --d-gradient-color-dark: #141123;
     --d-gradient-color-medium: #4f4d86;
     --d-gradient-color-light: #46a2ac;
@@ -251,7 +249,7 @@
 
     --short-animation-duration: 0.2s;
     --medium-animation-duration: 0.4s;
-    --light-source-glow-animation: 15s;
+    --light-source-glow-animation-duration: 15s;
     --top-left-cloud-animation-duration: 60s;
     --bottom-left-cloud-animation-duration: 55s;
     --top-right-cloud-animation-duration: 45s;

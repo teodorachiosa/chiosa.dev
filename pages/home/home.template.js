@@ -2,7 +2,7 @@ const html = String.raw;
 
 export const tCHomeTemplate = html`
     <div class="avatar-and-text-wrapper">
-        <h2 class="sr-only">About me</h2>
+        <h2 class="visually-hidden">About me</h2>
         <div class="avatar">
             <img
                 src="assets/avatar.webp"
