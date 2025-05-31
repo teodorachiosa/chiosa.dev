@@ -1,6 +1,6 @@
 {
     "name": "@chiosa/dev",
-    "version": "1.0.35",
+    "version": "1.0.36",
     "main": "app.js",
     "files": [
         "assets/fonts",
