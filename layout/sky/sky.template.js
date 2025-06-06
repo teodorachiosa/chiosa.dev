@@ -6,7 +6,7 @@ export const tCSkyTemplate = html`
             >Skip to main content</a
         >
         <div
-            role="image"
+            role="img"
             aria-labelledby="illustration-description"
             class="sky-container main-gradient-background background-image"
         >
