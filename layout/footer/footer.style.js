@@ -7,39 +7,43 @@ tCFooterStyle.replaceSync(css`
         margin-top: 10rem;
         container-type: inline-size;
 
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 50ch;
-            gap: 0.7rem 2.5rem;
-            padding: 0;
-            list-style: none;
+        nav {
+            display: contents;
 
-            li {
-                a.link {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0.5rem;
-                    font-size: 1.1rem;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 50ch;
+                gap: 0.7rem 2.5rem;
+                padding: 0;
+                list-style: none;
 
-                    .icon {
+                li {
+                    a.link {
+                        position: relative;
                         display: flex;
-                        width: 1rem;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.5rem;
+                        font-size: 1.2rem;
 
-                        svg {
-                            stroke: currentColor;
+                        .icon {
+                            display: flex;
+                            width: 1rem;
+
+                            svg {
+                                stroke: currentColor;
+                            }
                         }
-                    }
 
-                    .text {
-                        margin-left: 0.6rem;
-                    }
+                        .text {
+                            margin-left: 0.6rem;
+                        }
 
-                    &:hover,
-                    &:focus-visible {
-                        translate: -0.1rem -0.1rem;
+                        &:hover,
+                        &:focus-visible {
+                            translate: -0.1rem -0.1rem;
+                        }
                     }
                 }
             }
