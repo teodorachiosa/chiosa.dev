@@ -69,7 +69,7 @@ a {
     color: var(--link-color) !important;
     transition: var(--short-animation-duration) ease-in-out;
     text-decoration: underline 0.1rem
-        color-mix(in hsl, var(--link-color), transparent 35%);
+        color-mix(in hsl, var(--link-color), transparent 30%);
     text-underline-offset: 0.2rem;
     font-weight: 400;
 
